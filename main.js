@@ -1013,25 +1013,64 @@ document.addEventListener('DOMContentLoaded', () => {
     const navToggleBtn = document.getElementById('nav-toggle-btn');
     const navLinks = document.getElementById('nav-links');
 
-    if (navToggleBtn && navLinks) {
-        navToggleBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            const icon = navToggleBtn.querySelector('i');
-            if (icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-xmark');
-            }
-        });
-
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
+    function closeMobileNav() {
+        if (navLinks && navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            if (navToggleBtn) {
+                navToggleBtn.setAttribute('aria-expanded', 'false');
                 const icon = navToggleBtn.querySelector('i');
                 if (icon) {
                     icon.classList.add('fa-bars');
                     icon.classList.remove('fa-xmark');
                 }
+            }
+        }
+    }
+
+    if (navToggleBtn && navLinks) {
+        navToggleBtn.setAttribute('aria-expanded', 'false');
+        navToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('open');
+            navToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            const icon = navToggleBtn.querySelector('i');
+            if (icon) {
+                if (isOpen) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                }
+            }
+        });
+
+        // Close when clicking any nav link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileNav();
             });
+        });
+
+        // Close mobile nav when clicking anywhere outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !navToggleBtn.contains(e.target)) {
+                closeMobileNav();
+            }
+        });
+
+        // Close on escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileNav();
+            }
+        });
+
+        // Close on window resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                closeMobileNav();
+            }
         });
     }
 
@@ -1045,7 +1084,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                const navOffset = 80;
+                const isMobile = window.innerWidth <= 768;
+                const navOffset = isMobile ? 68 : 80;
                 const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                 const offsetPosition = elementPosition - navOffset;
 

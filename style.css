@@ -80,6 +80,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 86px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body.studio-body {
@@ -90,8 +92,14 @@ body.studio-body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100%;
   position: relative;
   min-height: 100vh;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Typography Defaults */
@@ -4412,35 +4420,34 @@ a {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Responsive Animation Keyframes
    ========================================================================== */
-@media (max-width: 1024px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+@keyframes slideDownNav {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-
-  .hero-right {
-    justify-content: flex-start;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
-  }
-
+/* ==========================================================================
+   Responsive Breakpoint: Large Screens & Laptops (<= 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) {
   .nav-container {
-    padding: 0 1.5rem;
-    gap: 1.2rem;
+    padding: 0 1.75rem;
+    gap: 1.25rem;
   }
 
   .nav-brand {
-    margin-right: 0.8rem;
+    margin-right: 1.25rem;
   }
 
   .nav-actions {
-    margin-left: 0.8rem;
+    margin-left: 1.25rem;
   }
 
   .nav-links {
@@ -4449,145 +4456,535 @@ a {
 
   .nav-item {
     font-size: 0.82rem;
-    padding: 0.35rem 0.55rem;
+    padding: 0.35rem 0.6rem;
   }
 
-  .toolkit-grid,
-  .milestones-grid,
-  .leadership-cards-grid {
-    grid-template-columns: 1fr;
+  .hero-container {
+    gap: 2.5rem;
+    grid-template-columns: 1.1fr 0.9fr;
   }
 
-  .timeline-stack::before {
-    left: 100px;
+  .hero-title {
+    font-size: 3.4rem;
   }
 
-  .carousel-stage-container {
-    min-height: 610px;
-    padding: 1rem 0;
+  .about-grid,
+  .contact-grid {
+    gap: 2.5rem;
   }
 
-  .carousel-project-card {
-    max-width: 520px;
+  .toolkit-grid {
+    gap: 1.15rem;
   }
 
-  .carousel-project-card.is-prev {
-    transform: translate3d(-50%, 8px, 0) scale(0.88);
-    opacity: 0.45;
-  }
-
-  .carousel-project-card.is-next {
-    transform: translate3d(50%, 8px, 0) scale(0.88);
-    opacity: 0.45;
+  .milestones-grid {
+    gap: 1.15rem;
   }
 }
 
+/* ==========================================================================
+   Responsive Breakpoint: Tablets & Small Laptops (<= 1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
+  .navbar-header {
+    height: 74px;
+  }
+
+  .nav-container {
+    padding: 0 1.5rem;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    margin-right: 0;
+  }
+
+  .nav-actions {
+    margin-left: 0;
+    gap: 0.75rem;
+  }
+
+  /* Mobile/Tablet Drawer Navigation */
   .nav-links {
     display: none;
-    position: absolute;
-    top: 80px;
+    position: fixed;
+    top: 74px;
     left: 0;
     right: 0;
-    background: #faf7f2;
-    border-bottom: 1px solid #dec8c4;
-    padding: 1.5rem 2rem;
+    background: rgba(250, 247, 242, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(222, 200, 196, 0.7);
+    padding: 1.25rem 1.75rem 1.75rem;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    align-items: stretch;
+    gap: 0.45rem;
+    box-shadow: 0 20px 40px rgba(168, 89, 102, 0.12);
+    z-index: 999;
+    max-height: calc(100vh - 74px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-links.open {
     display: flex;
-    animation: heroFade 0.22s var(--ease-editorial);
+    animation: slideDownNav 0.26s var(--ease-editorial);
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 0.75rem 1.1rem;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-headline);
+    border: 1px solid transparent;
+  }
+
+  .nav-item:hover,
+  .nav-item.active {
+    background: var(--rose-light-bg);
+    border-color: rgba(168, 89, 102, 0.15);
+  }
+
+  .item-num {
+    font-size: 0.78rem;
+    padding: 0.18rem 0.5rem;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.04);
   }
 
   .nav-toggle-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(253, 242, 236, 0.9);
+    border: 1px solid rgba(222, 200, 196, 0.65);
+    color: var(--rose-primary);
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-editorial);
+  }
+
+  .nav-toggle-btn:hover {
+    background: var(--rose-light-bg);
+    border-color: var(--rose-primary);
+    transform: scale(1.04);
+  }
+
+  /* Hero Stacking */
+  .hero-section {
+    padding: 7.5rem 1.5rem 5rem;
+    min-height: auto;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .hero-left {
+    align-items: flex-start;
+    max-width: 720px;
+  }
+
+  .hero-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+  }
+
+  /* Section Grids */
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-cards-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .leadership-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .toolkit-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+  }
+
+  .milestones-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+  }
+
+  .timeline-row {
+    grid-template-columns: 75px 35px 1fr;
+  }
+
+  .timeline-stem-track {
+    left: 92px;
   }
 }
 
+/* ==========================================================================
+   Responsive Breakpoint: Tablets & Large Handhelds (<= 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
+  .navbar-header {
+    height: 70px;
+  }
+
+  .nav-container {
+    padding: 0 1.25rem;
+  }
+
+  .nav-links {
+    top: 70px;
+    max-height: calc(100vh - 70px);
+    padding: 1rem 1.25rem 1.5rem;
+  }
+
+  .brand-badge {
+    font-size: 0.74rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .brand-name {
+    font-size: 1.12rem;
+  }
+
+  .btn-resume-pill {
+    font-size: 0.8rem;
+    padding: 0.38rem 0.85rem;
+    gap: 0.4rem;
+  }
+
+  /* Section Padding */
   .section-block {
-    padding: 5rem 1.25rem 4.5rem;
+    padding: 4.8rem 1.25rem 4.2rem;
   }
 
-  .hero-title {
-    font-size: 2.8rem;
+  .section-chapter {
+    margin-bottom: 1.5rem;
   }
 
-  .hero-subtitle {
-    font-size: 1.15rem;
+  .chapter-badge {
+    font-size: 0.72rem;
+    padding: 0.22rem 0.65rem;
+    margin-bottom: 0.5rem;
   }
 
   .section-heading {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    margin-bottom: 0.65rem;
   }
 
+  .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.62;
+    margin-bottom: 2rem;
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    padding: 6.2rem 1.25rem 3.8rem;
+  }
+
+  .hero-container {
+    gap: 2.8rem;
+  }
+
+  .hero-status-pill {
+    font-size: 0.76rem;
+    padding: 0.34rem 0.85rem;
+    margin-bottom: 1.15rem;
+    line-height: 1.4;
+    white-space: normal;
+  }
+
+  .hero-title {
+    font-size: clamp(2.35rem, 7.5vw, 3rem);
+    margin-bottom: 1rem;
+    line-height: 1.12;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.08rem, 3.4vw, 1.22rem);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .hero-bio {
+    font-size: 0.95rem;
+    line-height: 1.68;
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn-primary-pill,
+  .btn-secondary-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-text-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.45rem;
+  }
+
+  /* Profile Card Mobile */
+  .profile-card {
+    padding: 1.4rem 1.25rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card-tabs-header {
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    height: auto;
+  }
+
+  .card-tab-btn {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  .profile-person-row {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile-avatar-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+  }
+
+  .person-name {
+    font-size: 1.22rem;
+  }
+
+  .person-degree {
+    font-size: 0.82rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .open-badge {
+    font-size: 0.72rem;
+    padding: 0.22rem 0.6rem;
+  }
+
+  .info-tiles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    margin-bottom: 0.95rem;
+  }
+
+  .info-tile {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .tile-label {
+    font-size: 0.64rem;
+  }
+
+  .tile-val {
+    font-size: 0.82rem;
+  }
+
+  .tile-peach .tile-val.val-peach {
+    font-size: 1.05rem;
+  }
+
+  .profile-footer-note {
+    font-size: 0.82rem;
+    padding-top: 0.75rem;
+    gap: 0.55rem;
+  }
+
+  /* 01. About Cards */
+  .about-cards-stack {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-pastel-card {
+    padding: 1.35rem 1.4rem;
+    border-radius: 18px;
+  }
+
+  .fpc-value {
+    font-size: 1.35rem;
+  }
+
+  /* 02. Projects & 05. Leadership */
   .leadership-header-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+    margin-bottom: 1.8rem;
   }
 
-  .leadership-filter-pills {
+  .leadership-filter-pills,
+  .project-filter-pills {
     width: 100%;
     overflow-x: auto;
-    padding: 0.4rem;
+    padding: 0.35rem;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .leadership-filter-pills::-webkit-scrollbar,
+  .project-filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-pill {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 0.78rem;
+    padding: 0.38rem 0.85rem;
   }
 
   .leadership-card {
-    padding: 1.6rem 1.3rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 20px;
+    gap: 1.1rem;
   }
 
-  .lc-gallery-preview.lc-gallery-trio,
+  .lc-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+  }
+
+  .lc-badge-pill {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .lc-term {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+  }
+
+  .lc-title {
+    font-size: 1.24rem;
+  }
+
+  .lc-org {
+    font-size: 0.82rem;
+    word-break: break-all;
+  }
+
+  .lc-desc {
+    font-size: 0.9rem;
+    line-height: 1.62;
+  }
+
+  .lc-highlights-block {
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+  }
+
+  .lc-bullets-list li {
+    font-size: 0.82rem;
+  }
+
   .lc-gallery-preview.lc-gallery-quad {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
   }
 
-  .lightbox-dialog {
-    max-height: 94vh;
+  .lc-gallery-preview.lc-gallery-trio {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
   }
 
-  .lightbox-media-box {
-    max-height: 55vh;
+  .lc-gallery-preview.lc-gallery-dual {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
   }
 
-  .lightbox-image {
-    max-height: 55vh;
+  .lc-gallery-item {
+    height: 115px;
+    border-radius: 12px;
   }
 
-  .lightbox-footer {
-    padding: 1rem 1.25rem;
+  .lc-overlay-text {
+    font-size: 0.68rem;
   }
 
-  .form-dual-row {
-    grid-template-columns: 1fr;
+  .lc-overlay-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.62rem;
   }
 
+  .lc-toggle-details-btn {
+    padding: 0.68rem 1.15rem;
+    font-size: 0.82rem;
+    width: 100%;
+  }
+
+  .lc-tag {
+    font-size: 0.72rem;
+    padding: 0.24rem 0.6rem;
+  }
+
+  /* 04. Journey Timeline */
   .timeline-stack {
     gap: 1.6rem;
   }
 
-  .timeline-stem-track {
-    left: 45px;
-    top: 15px;
-    bottom: 25px;
-  }
-
   .timeline-row {
-    grid-template-columns: 35px 20px 1fr;
+    grid-template-columns: 48px 22px 1fr;
     gap: 0;
   }
 
+  .timeline-stem-track {
+    left: 58px;
+    top: 12px;
+    bottom: 20px;
+  }
+
   .tr-year {
-    text-align: left;
-    padding-top: 0.5rem;
-    font-size: 1.15rem;
-    padding-right: 0.2rem;
+    font-size: 1.1rem;
+    padding-top: 0.4rem;
+    padding-right: 0.25rem;
+    text-align: right;
   }
 
   .tr-node {
@@ -4601,7 +4998,30 @@ a {
   }
 
   .tr-card-wrapper {
-    padding-left: 0.6rem;
+    padding-left: 0.55rem;
+  }
+
+  .tr-card {
+    padding: 1.25rem 1.15rem;
+    border-radius: 16px;
+  }
+
+  .tr-card-head {
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .tr-title {
+    font-size: 1.05rem;
+  }
+
+  .tr-date {
+    font-size: 0.75rem;
+  }
+
+  .tr-desc {
+    font-size: 0.86rem;
   }
 
   .timeline-row:nth-child(odd) .tr-card,
@@ -4613,113 +5033,386 @@ a {
     transform: translateY(0) !important;
   }
 
+  /* 07. Connect & Form */
+  .form-wrapper-card {
+    padding: 1.6rem 1.35rem;
+    border-radius: 20px;
+  }
+
+  .form-dual-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents iOS browser auto-zoom on focus */
+  }
+
+  .btn-submit-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Modals & Lightbox */
+  .project-modal-backdrop {
+    padding: 0.6rem;
+  }
+
+  .project-modal-dialog {
+    max-height: 93vh;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .modal-content-scroll {
+    padding: 1.8rem 1.35rem;
+    gap: 1.35rem;
+    max-height: 93vh;
+  }
+
+  .modal-title {
+    font-size: 1.45rem;
+  }
+
+  .modal-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .modal-labs-grid,
+  .modal-arch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lightbox-dialog {
+    max-height: 94vh;
+    border-radius: 18px;
+  }
+
+  .lightbox-media-box {
+    max-height: 52vh;
+  }
+
+  .lightbox-image {
+    max-height: 52vh;
+  }
+
+  .lightbox-footer {
+    padding: 1rem 1.25rem;
+  }
+
+  /* Footer */
   .footer-inner {
     flex-direction: column;
     gap: 1.2rem;
     text-align: center;
   }
 
-  /* Carousel Mobile Adjustments */
-  .carousel-section {
-    padding: 4.5rem 1.2rem;
-  }
-
-  .carousel-header-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-  }
-
-  .carousel-stage-container {
-    min-height: 640px;
-    padding: 0.5rem 0;
-  }
-
-  .carousel-project-card {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .carousel-project-card.is-prev {
-    transform: translate3d(-105%, 0, 0) scale(0.85);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .carousel-project-card.is-next {
-    transform: translate3d(105%, 0, 0) scale(0.85);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .proj-card-inner {
-    padding: 1.4rem 1.25rem;
-    gap: 0.95rem;
-  }
-
-  .proj-media-frame {
-    height: 180px;
-  }
-
-  .proj-title {
-    font-size: 1.28rem;
-  }
-
-  .proj-desc {
-    font-size: 0.88rem;
-  }
-
-  .proj-card-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.6rem;
-  }
-
-  .btn-proj-action {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .carousel-controls-bar {
-    flex-direction: column;
+  .footer-left {
     align-items: center;
-    gap: 1rem;
-    margin-top: 1.2rem;
-    padding: 0;
   }
 
-  .carousel-interaction-hint {
+  .footer-sub {
+    font-size: 0.8rem;
+  }
+
+  /* Hide high-index scrapbook decor that may cause visual clutter on mobile */
+  .scrapbook-decor {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoint: Mobile Phones (<= 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .brand-badge {
+    font-size: 0.72rem;
+    padding: 0.26rem 0.52rem;
+  }
+
+  .brand-name {
+    font-size: 1.02rem;
+  }
+
+  .btn-resume-pill {
+    padding: 0.32rem 0.68rem;
+    font-size: 0.75rem;
+    gap: 0.3rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 5.5rem 1rem 3rem;
+  }
+
+  .hero-status-pill {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.05rem, 8.5vw, 2.55rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .hero-bio {
+    font-size: 0.88rem;
+    line-height: 1.62;
+  }
+
+  /* Profile Card */
+  .profile-card {
+    padding: 1.2rem 1rem;
+    border-radius: 18px;
+  }
+
+  .profile-person-row {
+    gap: 0.75rem;
+  }
+
+  .profile-avatar-img {
+    width: 68px;
+    height: 68px;
+    border-radius: 12px;
+  }
+
+  .person-name {
+    font-size: 1.1rem;
+  }
+
+  .person-degree {
+    font-size: 0.75rem;
+  }
+
+  .info-tiles-grid {
+    gap: 0.5rem;
+  }
+
+  .info-tile {
+    padding: 0.58rem 0.65rem;
+  }
+
+  .tile-label {
+    font-size: 0.58rem;
+  }
+
+  .tile-val {
+    font-size: 0.75rem;
+  }
+
+  .tile-peach .tile-val.val-peach {
+    font-size: 0.95rem;
+  }
+
+  .profile-footer-note {
     font-size: 0.76rem;
   }
 
+  /* Section Headings */
+  .section-block {
+    padding: 4rem 1rem 3.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.85rem;
+  }
+
+  /* Projects & Leadership */
+  .leadership-card {
+    padding: 1.25rem 1rem;
+    border-radius: 18px;
+  }
+
+  .lc-gallery-preview.lc-gallery-quad {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .lc-gallery-preview.lc-gallery-trio {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+
+  .lc-gallery-preview.lc-gallery-dual {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .lc-gallery-item {
+    height: 98px;
+    border-radius: 10px;
+  }
+
+  .lc-gallery-preview.lc-gallery-trio .lc-gallery-item {
+    height: 85px;
+  }
+
+  .lc-toggle-details-btn {
+    font-size: 0.78rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  /* Toolkit */
+  .toolkit-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .toolkit-card {
+    padding: 1.25rem 1.1rem;
+    border-radius: 16px;
+  }
+
+  .toolkit-context-bar {
+    padding: 0.75rem 1.1rem;
+    font-size: 0.82rem;
+    border-radius: 12px;
+  }
+
+  /* Timeline */
+  .timeline-row {
+    grid-template-columns: 40px 18px 1fr;
+  }
+
+  .timeline-stem-track {
+    left: 48px;
+  }
+
+  .tr-year {
+    font-size: 0.96rem;
+  }
+
+  .tr-card {
+    padding: 1.1rem 0.95rem;
+  }
+
+  .tr-badge {
+    font-size: 0.65rem;
+  }
+
+  .tr-title {
+    font-size: 0.96rem;
+  }
+
+  /* Milestones */
+  .milestones-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .milestone-card {
+    padding: 1.35rem 1.2rem;
+    border-radius: 16px;
+  }
+
+  /* Connect */
+  .c-link-card {
+    padding: 0.75rem 0.85rem;
+    gap: 0.65rem;
+  }
+
+  .cl-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.88rem;
+  }
+
+  .cl-val {
+    font-size: 0.78rem;
+  }
+
+  .form-wrapper-card {
+    padding: 1.35rem 1.1rem;
+    border-radius: 18px;
+  }
+
   /* Modal Mobile */
-  .project-modal-backdrop {
-    padding: 0.75rem;
-  }
-
-  .project-modal-dialog {
-    max-height: 92vh;
-    border-radius: 20px;
-  }
-
   .modal-content-scroll {
-    padding: 1.8rem 1.35rem;
-    gap: 1.35rem;
+    padding: 1.4rem 1rem;
+    gap: 1.15rem;
   }
 
   .modal-title {
-    font-size: 1.4rem;
-  }
-
-  .modal-media-frame {
-    height: 190px;
+    font-size: 1.25rem;
   }
 
   .modal-close-btn {
-    top: 0.85rem;
-    right: 0.85rem;
-    width: 34px;
-    height: 34px;
-    font-size: 0.9rem;
+    top: 0.65rem;
+    right: 0.65rem;
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .modal-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .modal-stat-card {
+    padding: 0.65rem 0.7rem;
+  }
+
+  .modal-media-viewport {
+    min-height: 160px;
+    max-height: 30vh;
+  }
+
+  .modal-media-video,
+  .modal-media-img {
+    max-height: 30vh;
+  }
+
+  .modal-pipeline-steps {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  .modal-pipeline-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+    margin: 0.1rem 0;
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoint: Ultra-Compact Phones (<= 360px)
+   ========================================================================== */
+@media (max-width: 360px) {
+  .brand-name {
+    display: none;
+  }
+
+  .brand-divider {
+    display: none;
+  }
+
+  .info-tiles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lc-gallery-preview.lc-gallery-trio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-buttons .btn-primary-pill,
+  .hero-buttons .btn-secondary-pill {
+    font-size: 0.84rem;
+    padding: 0.72rem 1.1rem;
   }
 }
