@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neha Miriam Jose — Computer Science Engineer & Developer</title>
+    <meta name="description"
+        content="Portfolio of Neha Miriam Jose — B.Tech Computer Science student at Amal Jyothi College of Engineering. Specializing in Python, Machine Learning, and Full-Stack Development.">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="studio-body">
+    <!-- Organic Background Shapes & Dots -->
+    <div class="bg-shape-top-right"></div>
+    <div class="bg-dots-top-right">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+
+    <div class="bg-shape-bottom-left"></div>
+    <div class="bg-dots-bottom-left">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- Curved Graphic in Hero Corner -->
+    <svg class="bg-curve-graphic" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 250 C120 250, 180 180, 240 80 S280 20, 300 0" stroke="#e8bec3" stroke-width="1.75"
+            stroke-linecap="round" />
+        <circle cx="240" cy="80" r="4.5" fill="#ab5c67" />
+    </svg>
+
+    <!-- Header Navigation -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <span class="brand-badge">NMJ</span>
+                <span class="brand-divider"></span>
+                <span class="brand-name">Neha Miriam Jose</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about" class="nav-item"><span class="item-num">01</span> About</a>
+                <a href="#projects" class="nav-item"><span class="item-num">02</span> Work</a>
+                <a href="#skills" class="nav-item"><span class="item-num">03</span> Skills</a>
+                <a href="#journey" class="nav-item"><span class="item-num">04</span> Journey</a>
+                <a href="#leadership" class="nav-item"><span class="item-num">05</span> Leadership</a>
+                <a href="#milestones" class="nav-item"><span class="item-num">06</span> Milestones</a>
+                <a href="#contact" class="nav-item"><span class="item-num">07</span> Connect</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="./Miriamjose_neha_resume_21-07-2026.pdf" class="btn-resume-pill"
+                    download="Neha_Miriam_Jose_Resume.pdf" target="_blank">
+                    <i class="fa-regular fa-file-pdf"></i>
+                    <span>Resume</span>
+                </a>
+                <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <!-- Left: Headline & Bio -->
+                <div class="hero-left">
+                    <div class="hero-status-pill">
+                        <span class="status-dot"></span>
+                        <span>B.Tech CSE • Amal Jyothi College of Engineering</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Neha Miriam <span class="title-accent">Jose</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle">
+                        Computer Science Engineer & Machine Learning Developer
+                    </h2>
+
+                    <p class="hero-bio">
+                        I build software and intelligent machine learning systems that solve real problems. Interested
+                        in NLP pipelines, full-stack web applications, and web security fundamentals.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary-pill">
+                            <span>Selected Work</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="https://github.com/nehamiriamjose" target="_blank" rel="noopener noreferrer"
+                            class="btn-secondary-pill">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#contact" class="btn-text-link">
+                            <span>Get in Touch</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Profile Card Matching Screenshot -->
+                <div class="hero-right">
+                    <div class="profile-card" id="profile-card">
+                        <!-- Card Navigation Tabs -->
+                        <div class="card-tabs-header">
+                            <button class="card-tab-btn active" data-tab="profile">PROFILE</button>
+                            <button class="card-tab-btn" data-tab="focus">FOCUS</button>
+                            <button class="card-tab-btn" data-tab="toolkit">TOOLKIT</button>
+                        </div>
+
+                        <!-- 3D Flipping Content Stage -->
+                        <div class="card-panes-stage" id="card-panes-stage">
+                            <!-- Tab 1: Profile -->
+                            <div class="tab-content-pane active" id="pane-profile">
+                                <div class="profile-person-row">
+                                    <img src="./avatar.jpg" alt="Neha Miriam Jose" class="profile-avatar-img">
+                                    <div class="profile-info-block">
+                                        <h3 class="person-name">Neha Miriam Jose</h3>
+                                        <p class="person-degree">Computer Science & Engineering</p>
+                                        <div class="open-badge">
+                                            <span class="green-dot"></span>
+                                            <span>Open to opportunities</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2x2 Info Grid -->
+                                <div class="info-tiles-grid">
+                                    <div class="info-tile tile-lavender">
+                                        <div class="tile-label">
+                                            <i class="fa-solid fa-graduation-cap"></i>
+                                            <span>INSTITUTION</span>
+                                        </div>
+                                        <div class="tile-val">Amal Jyothi College of Eng.</div>
+                                    </div>
+
+                                    <div class="info-tile tile-peach">
+                                        <div class="tile-label">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            <span>CURRENT CGPA</span>
+                                        </div>
+                                        <div class="tile-val val-peach">9.29 / 10.00</div>
+                                    </div>
+
+                                    <div class="info-tile tile-sage">
+                                        <div class="tile-label">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span>ACADEMIC BATCH</span>
+                                        </div>
+                                        <div class="tile-val">2023 – 2027</div>
+                                    </div>
+
+                                    <div class="info-tile tile-blue">
+                                        <div class="tile-label">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>LOCATION</span>
+                                        </div>
+                                        <div class="tile-val">Kanjirappally, Kerala</div>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Handwritten / Italic Note -->
+                                <div class="profile-footer-note">
+                                    <i class="fa-solid fa-leaf note-leaf-icon"></i>
+                                    <span>Eager to learn by building, exploring new tools, and collaborating on
+                                        impactful code.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tab 2: Focus -->
+                            <div class="tab-content-pane" id="pane-focus">
+                                <h4 class="pane-title">Active Projects & Focus</h4>
+                                <div class="focus-stack">
+                                    <div class="focus-box box-blue">
+                                        <div class="fb-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                        <div class="fb-text">
+                                            <strong>Data Science & ML Intern</strong>
+                                            <p>NeST Digital, Kochi — Industrial dataset preprocessing and model
+                                                evaluation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="focus-box box-pink">
+                                        <div class="fb-icon"><i class="fa-solid fa-brain"></i></div>
+                                        <div class="fb-text">
+                                            <strong>NLP Classification Systems</strong>
+                                            <p>BERT, SpaCy & NLTK for multi-label ticket triage and priority ranking.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="focus-box box-sage">
+                                        <div class="fb-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                        <div class="fb-text">
+                                            <strong>Web Security & Exploits</strong>
+                                            <p>Hands-on vulnerability training (SQLi, XSS, CSRF) with FastAPI & Docker.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bottom Handwritten / Italic Note -->
+                                <div class="profile-footer-note">
+                                    <i class="fa-solid fa-leaf note-leaf-icon"></i>
+                                    <span>Eager to learn by building, exploring new tools, and collaborating on
+                                        impactful code.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tab 3: Toolkit -->
+                            <div class="tab-content-pane" id="pane-toolkit">
+                                <h4 class="pane-title">Key Technical Stack</h4>
+                                <div class="toolkit-tags-container">
+                                    <div class="tag-row-group">
+                                        <span class="tag-label">Languages</span>
+                                        <div class="tag-pills">
+                                            <span class="pill-tag p-pink">Python</span>
+                                            <span class="pill-tag p-blue">C</span>
+                                            <span class="pill-tag p-sage">SQL</span>
+                                            <span class="pill-tag p-lavender">Java (Basic)</span>
+                                        </div>
+                                    </div>
+                                    <div class="tag-row-group">
+                                        <span class="tag-label">Backend & Web</span>
+                                        <div class="tag-pills">
+                                            <span class="pill-tag p-blue">FastAPI</span>
+                                            <span class="pill-tag p-peach">Flask</span>
+                                            <span class="pill-tag p-sage">Streamlit</span>
+                                            <span class="pill-tag p-pink">HTML5 / CSS3</span>
+                                            <span class="pill-tag p-lavender">JavaScript</span>
+                                        </div>
+                                    </div>
+                                    <div class="tag-row-group">
+                                        <span class="tag-label">Machine Learning & Tools</span>
+                                        <div class="tag-pills">
+                                            <span class="pill-tag p-lavender">BERT</span>
+                                            <span class="pill-tag p-blue">SpaCy / NLTK</span>
+                                            <span class="pill-tag p-sage">Scikit-learn</span>
+                                            <span class="pill-tag p-peach">Docker</span>
+                                            <span class="pill-tag p-sage">ESP32 / LoRa</span>
+                                            <span class="pill-tag p-pink">Figma</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bottom Handwritten / Italic Note -->
+                                <div class="profile-footer-note">
+                                    <i class="fa-solid fa-leaf note-leaf-icon"></i>
+                                    <span>Eager to learn by building, exploring new tools, and collaborating on
+                                        impactful code.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01. ABOUT SECTION -->
+        <section id="about" class="section-block">
+            <div class="pastel-decor-shape decor-lavender decor-blob-1" aria-hidden="true"></div>
+            <!-- Scrapbook Delicate Ring Accent -->
+            <svg class="scrapbook-decor decor-ring-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="50" cy="50" r="42" stroke="#e8bec3" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.4"/>
+                <circle cx="50" cy="50" r="20" stroke="#7c6bb5" stroke-width="1" opacity="0.25"/>
+            </svg>
+            <div class="section-inner">
+                <div class="section-chapter">
+                    <span class="chapter-badge">01 / ABOUT</span>
+                    <h2 class="section-heading">Who I Am</h2>
+                    <div class="chapter-divider"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <p class="about-highlight-para">
+                            I am a Computer Science & Engineering undergraduate at <strong>Amal Jyothi College of
+                                Engineering (Autonomous)</strong>, Kanjirappally, maintaining an academic CGPA of
+                            <strong>9.29 / 10.00</strong>.
+                        </p>
+                        <p>
+                            My enthusiasm lies at the intersection of machine learning, backend architecture, and
+                            building tools that make a difference. Rather than treating concepts as purely academic, I
+                            enjoy building functional applications—from training and fine-tuning NLP classification
+                            models to deploying containerized backends with FastAPI, Flask, and SQLite.
+                        </p>
+                        <p>
+                            Through practical internships at <strong>NeST Digital</strong> (Data Science & ML) and
+                            <strong>Infosys Springboard</strong> (Machine Learning), I have built hands-on experience
+                            handling real-world datasets, optimizing inference pipelines, and engineering clean user
+                            experiences.
+                        </p>
+                    </div>
+
+                    <div class="about-cards-stack">
+                        <div class="feature-pastel-card card-pink">
+                            <div class="fpc-head">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Academic Excellence</span>
+                            </div>
+                            <div class="fpc-value">9.29 / 10.00 CGPA</div>
+                            <p class="fpc-sub">B.Tech Computer Science (2023–2027) • Amal Jyothi College of Engineering
+                            </p>
+                        </div>
+
+                        <div class="feature-pastel-card card-blue">
+                            <div class="fpc-head">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Practical Experience</span>
+                            </div>
+                            <div class="fpc-value">2 Technical Internships</div>
+                            <p class="fpc-sub">NeST Digital (Data Science & ML) & Infosys Springboard (Machine Learning)
+                            </p>
+                        </div>
+
+                        <div class="feature-pastel-card card-sage">
+                            <div class="fpc-head">
+                                <i class="fa-solid fa-award"></i>
+                                <span>Certifications</span>
+                            </div>
+                            <div class="fpc-value">NPTEL Elite & Springboard</div>
+                            <p class="fpc-sub">Database Management Systems (IIT Kharagpur), C Programming & Generative
+                                AI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02. PROJECTS SECTION -->
+        <section id="projects" class="section-block bg-subtle leadership-section">
+            <div class="pastel-decor-shape decor-peach decor-blob-2" aria-hidden="true"></div>
+            <div class="section-inner">
+                <div class="section-chapter">
+                    <span class="chapter-badge">02 / SELECTED WORKS & ENGINEERING</span>
+                    <h2 class="section-heading">Featured Engineering Projects</h2>
+                    <div class="chapter-divider"></div>
+                </div>
+
+                <div class="leadership-header-row">
+                    <p class="section-subtitle">
+                        Architecting robust full-stack applications, isolated containerized security sandboxes, and intelligent machine learning systems with production-grade engineering.
+                    </p>
+                    <div class="leadership-filter-pills project-filter-pills" role="tablist" aria-label="Filter engineering projects">
+                        <button class="filter-pill active" data-filter="all">All Projects</button>
+                        <button class="filter-pill" data-filter="cybersecurity">Cybersecurity & Sandbox</button>
+                        <button class="filter-pill" data-filter="ml">AI & NLP</button>
+                        <button class="filter-pill" data-filter="iot">IoT & Embedded Systems</button>
+                        <button class="filter-pill" data-filter="fullstack">Full-Stack Web</button>
+                    </div>
+                </div>
+
+                <div class="leadership-cards-grid project-cards-grid">
+                    <!-- 1. Ethical Hacking Simulation Portal -->
+                    <article class="leadership-card card-sage project-card" data-category="cybersecurity">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-sage">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>CYBERSECURITY & DOCKER SANDBOX</span>
+                            </div>
+                            <span class="lc-term">2026 / v1.0 Production</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">Ethical Hacking Simulation Portal</h3>
+                            <p class="lc-org"><i class="fa-brands fa-github"></i> nehamiriamjose/Ethical-Hacking-Simulation-Portal</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            A production-grade, full-stack cybersecurity learning & simulation platform engineered to bridge the gap between theoretical security and practical offensive/defensive operations. Features on-demand Docker sandbox containers, 10 OWASP vulnerability labs, modular LMS, AI tutoring, and real-time social leaderboards.
+                        </p>
+
+                        <!-- Gallery Thumbnails (2 Videos + 2 Screenshots) -->
+                        <div class="lc-gallery-preview lc-gallery-quad">
+                            <div class="lc-gallery-item is-video" data-full="./project/ethical-hacking/user-demo.mp4" data-type="video" data-poster="./project/ethical-hacking/user-challenges.png" data-caption="Interactive Student Experience: Live exploit terminal, container spin-up, flag verification, interactive LMS tutorial player, and peer chat" data-tag="Student Exploit Demo (Video)">
+                                <img src="./project/ethical-hacking/user-challenges.png" alt="Student Exploit Experience Demo" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-play"></i></span>
+                                    <span class="lc-overlay-text">User Video Demo</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item is-video" data-full="./project/ethical-hacking/admin-demo.mp4" data-type="video" data-poster="./project/ethical-hacking/admin-challenges.png" data-caption="Platform Administrator Walkthrough: Real-time user management & security audit logs, Docker container orchestration, dynamic challenge creation, and quiz composer" data-tag="Admin Governance Demo (Video)">
+                                <img src="./project/ethical-hacking/admin-challenges.png" alt="Admin Governance Console Demo" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-play"></i></span>
+                                    <span class="lc-overlay-text">Admin Video Demo</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./project/ethical-hacking/user-challenges.png" data-type="image" data-caption="Challenge discovery catalog featuring 10 hands-on exploit labs with difficulty indicators, XP reward points, category filtering, and direct Docker container spin-up triggers" data-tag="Vulnerability Directory">
+                                <img src="./project/ethical-hacking/user-challenges.png" alt="10 Vulnerability Labs Catalog" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">10 Exploit Labs</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./project/ethical-hacking/user-tutorials.png" data-type="image" data-caption="Modular lesson engine featuring rich content blocks, diagrammatic walkthroughs, interactive checkpoint knowledge checks, and Google Gemini AI hints" data-tag="Interactive LMS Engine">
+                                <img src="./project/ethical-hacking/user-tutorials.png" alt="Interactive LMS Tutorials" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">LMS Tutorials</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Open Details Pop-up Modal Button -->
+                        <button type="button" class="lc-toggle-details-btn btn-open-modal" data-modal-type="project" data-project="0">
+                            <span class="toggle-text">View Full Project Details</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square toggle-icon"></i>
+                        </button>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-sage">FastAPI 0.104</span>
+                            <span class="lc-tag tag-sage">Docker SDK 7.0</span>
+                            <span class="lc-tag tag-sage">Python 3.10</span>
+                            <span class="lc-tag tag-sage">SQLite3 (27 Tables)</span>
+                            <span class="lc-tag tag-sage">Google Gemini AI</span>
+                            <span class="lc-tag tag-sage">Flask Micro-Labs</span>
+                            <span class="lc-tag tag-sage">Vanilla CSS3 / ES6</span>
+                        </div>
+                    </article>
+
+                    <!-- 2. AI-Powered Ticket Classification System -->
+                    <article class="leadership-card card-blue project-card" data-category="ml">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-blue">
+                                <i class="fa-solid fa-brain"></i>
+                                <span>MACHINE LEARNING & NLP</span>
+                            </div>
+                            <span class="lc-term">2026 / Academic Project</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">AI-Powered Ticket Classification System</h3>
+                            <p class="lc-org"><i class="fa-brands fa-github"></i> nehamiriamjose/ticket-classification-nlp</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            An intelligent enterprise customer support automation pipeline engineered to ingest multi-channel customer queries, predict priority levels with machine learning classifiers, extract key entities using SpaCy, and present real-time inference telemetry through an interactive dashboard.
+                        </p>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="lc-gallery-preview lc-gallery-dual">
+                            <div class="lc-gallery-item" data-full="./ticket_classification.jpg" data-type="image" data-caption="Real-time support ticket triage, category confidence scores, and priority breakdowns" data-tag="ML Analytics Dashboard">
+                                <img src="./ticket_classification.jpg" alt="AI Ticket Classification Dashboard" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Analytics Dashboard</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./ticket_classification.jpg" data-type="image" data-caption="Automated query ingestion, SpaCy entity recognition, and BERT multi-label classifier telemetry" data-tag="Inference Pipeline">
+                                <img src="./ticket_classification.jpg" alt="NLP Inference Pipeline" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">NLP Pipeline</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Open Details Pop-up Modal Button -->
+                        <button type="button" class="lc-toggle-details-btn btn-open-modal" data-modal-type="project" data-project="1">
+                            <span class="toggle-text">View Full Project Details</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square toggle-icon"></i>
+                        </button>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-blue">Python 3.10</span>
+                            <span class="lc-tag tag-blue">BERT / PyTorch</span>
+                            <span class="lc-tag tag-blue">FastAPI</span>
+                            <span class="lc-tag tag-blue">Streamlit</span>
+                            <span class="lc-tag tag-blue">Scikit-Learn</span>
+                            <span class="lc-tag tag-blue">SpaCy NLP</span>
+                        </div>
+                    </article>
+
+                    <!-- 3. CraveCart - Food Ordering & Delivery System -->
+                    <article class="leadership-card card-pink project-card" data-category="fullstack">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-pink">
+                                <i class="fa-solid fa-utensils"></i>
+                                <span>FULL-STACK PYTHON FLASK & WSGI</span>
+                            </div>
+                            <span class="lc-term">2026 / Production Ready</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">CraveCart — Multi-User Food Ordering & Delivery System</h3>
+                            <p class="lc-org"><i class="fa-brands fa-github"></i> nehamiriamjose/cravecart-food-delivery</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            A high-concurrency, full-stack on-demand food ordering ecosystem connecting Customers, Restaurant Partners, and Courier Drivers into a unified platform. Powered by Python Flask, multi-threaded Waitress WSGI (64 workers), SQLite in WAL mode (tested for 1,000+ concurrent users with zero database locks), 7-stage animated SVG live delivery tracking, custom portion/modifier calculators, CravePoints loyalty rewards, and multi-gateway 3D-Secure & UPI checkout.
+                        </p>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="lc-gallery-preview lc-gallery-dual">
+                            <div class="lc-gallery-item" data-full="./food_ordering.jpg" data-type="image" data-caption="CraveCart Customer Portal: Multi-restaurant discovery, fuzzy instant search, portion/modifier customization modal, and CravePoints loyalty reward calculations" data-tag="Customer Discovery & Cart">
+                                <img src="./food_ordering.jpg" alt="CraveCart Customer Ordering Interface" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Customer & Cart Flow</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./food_ordering.jpg" data-type="image" data-caption="Real-Time 7-Stage Live Order Tracking: Animated courier route progression on SVG map alongside Restaurant Partner (/partner) and Courier Driver (/courier) dispatch controls" data-tag="7-Stage Live Tracking">
+                                <img src="./food_ordering.jpg" alt="CraveCart Live Delivery Progression" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Live 7-Stage Tracking</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Open Details Pop-up Modal Button -->
+                        <button type="button" class="lc-toggle-details-btn btn-open-modal" data-modal-type="project" data-project="2">
+                            <span class="toggle-text">View Full Project Details</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square toggle-icon"></i>
+                        </button>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-pink">Python 3.10+</span>
+                            <span class="lc-tag tag-pink">Flask Framework</span>
+                            <span class="lc-tag tag-pink">Waitress WSGI (64 Workers)</span>
+                            <span class="lc-tag tag-pink">SQLite (WAL Mode)</span>
+                            <span class="lc-tag tag-pink">1,000+ Concurrent Users</span>
+                            <span class="lc-tag tag-pink">Vanilla JS ES6+</span>
+                            <span class="lc-tag tag-pink">Web Audio API</span>
+                        </div>
+                    </article>
+
+                    <!-- 4. SwapReads - P2P Book Exchange -->
+                    <article class="leadership-card card-lavender project-card" data-category="fullstack">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-lavender">
+                                <i class="fa-solid fa-book-bookmark"></i>
+                                <span>P2P COMMUNITY PLATFORM</span>
+                            </div>
+                            <span class="lc-term">2025</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">SwapReads — P2P Book Exchange Platform</h3>
+                            <p class="lc-org"><i class="fa-brands fa-github"></i> nehamiriamjose/swapreads</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            A collaborative community platform connecting book lovers for peer-to-peer book swapping, genre curation, user ratings, and decentralized reading circles with real-time exchange validation.
+                        </p>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="lc-gallery-preview lc-gallery-dual">
+                            <div class="lc-gallery-item" data-full="./swapreads.png" data-type="image" data-caption="User-to-user book discovery, wishlist curation, and exchange tracking interface" data-tag="Book Marketplace">
+                                <img src="./swapreads.png" alt="SwapReads Platform Showcase" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Marketplace View</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./swapreads.png" data-type="image" data-caption="Book ratings, peer messaging, and exchange verification dashboard" data-tag="Reader Community">
+                                <img src="./swapreads.png" alt="SwapReads Community Dashboard" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Community Hub</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Open Details Pop-up Modal Button -->
+                        <button type="button" class="lc-toggle-details-btn btn-open-modal" data-modal-type="project" data-project="3">
+                            <span class="toggle-text">View Full Project Details</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square toggle-icon"></i>
+                        </button>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-lavender">Node.js</span>
+                            <span class="lc-tag tag-lavender">Express</span>
+                            <span class="lc-tag tag-lavender">MongoDB</span>
+                            <span class="lc-tag tag-lavender">JavaScript ES6</span>
+                            <span class="lc-tag tag-lavender">REST APIs</span>
+                            <span class="lc-tag tag-lavender">CSS3</span>
+                        </div>
+                    </article>
+
+                    <!-- 5. GeoSentinel - LoRa-Based Landslide Detection & Early Warning System -->
+                    <article class="leadership-card card-sage project-card" data-category="iot">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-sage">
+                                <i class="fa-solid fa-satellite-dish"></i>
+                                <span>LORA IOT & EMBEDDED TELEMETRY</span>
+                            </div>
+                            <span class="lc-term">2026 / Embedded Prototype</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">GeoSentinel: LoRa-Based Landslide Detection & Early Warning System</h3>
+                            <p class="lc-org"><i class="fa-brands fa-github"></i> nehamiriamjose/geosentinel-landslide-lora</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            An embedded disaster telemetry and slope stability monitoring ecosystem designed for off-grid mountainous terrains. Integrates dual ESP32 nodes communicating over long-range SX1278 LoRa radio (SPI bus), multi-axis soil moisture analysis (GPIO 34 ADC), environmental DHT22 temperature & humidity sensing, and MPU6050 6-DOF accelerometer and gyroscope tilt monitoring with CRC-16 packet validation and a 5-tier alert matrix.
+                        </p>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="lc-gallery-preview lc-gallery-dual">
+                            <div class="lc-gallery-item" data-full="./geosentinel.jpg" data-type="image" data-caption="GeoSentinel Central Telemetry Dashboard: 3D terrain geological slope stability visualization, live soil moisture & DHT22 telemetry, MPU6050 3-axis tilt indicators, and SX1278 RSSI/SNR signal diagnostics" data-tag="3D Telemetry Dashboard">
+                                <img src="./geosentinel.jpg" alt="GeoSentinel 3D Slope Telemetry Dashboard" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">3D Slope Dashboard</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./geosentinel_schematic.jpg" data-type="image" data-caption="GeoSentinel Hardware Schematic: Remote slope transmitter node (ESP32, SPI SX1278 LoRa, ADC Soil Sensor, 1-Wire DHT22, I2C MPU6050) transmitting over sub-GHz wireless RF link to central base station receiver" data-tag="Hardware & Sensor Schematic">
+                                <img src="./geosentinel_schematic.jpg" alt="GeoSentinel Hardware Schematic Diagram" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Hardware Schematic</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Open Details Pop-up Modal Button -->
+                        <button type="button" class="lc-toggle-details-btn btn-open-modal" data-modal-type="project" data-project="4">
+                            <span class="toggle-text">View Full Project Details</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square toggle-icon"></i>
+                        </button>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-sage">ESP32 (Dual Node)</span>
+                            <span class="lc-tag tag-sage">SX1278 LoRa (SPI)</span>
+                            <span class="lc-tag tag-sage">MPU6050 (6-DOF I2C)</span>
+                            <span class="lc-tag tag-sage">DHT22 Digital</span>
+                            <span class="lc-tag tag-sage">Soil Moisture ADC</span>
+                            <span class="lc-tag tag-sage">CRC-16 Integrity</span>
+                            <span class="lc-tag tag-sage">Embedded C++</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. SKILLS / TOOLKIT -->
+        <section id="skills" class="section-block">
+            <div class="pastel-decor-shape decor-blue decor-blob-3" aria-hidden="true"></div>
+            <div class="section-inner">
+                <div class="section-chapter">
+                    <span class="chapter-badge">03 / SKILLS</span>
+                    <h2 class="section-heading">My Toolkit</h2>
+                    <div class="chapter-divider"></div>
+                </div>
+
+                <p class="section-subtitle">
+                    Technologies and tools I work with. Hover or tap any item to view its application in my projects.
+                </p>
+
+                <div class="toolkit-grid">
+                    <!-- Programming -->
+                    <div class="toolkit-card card-pink">
+                        <div class="tc-header">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Programming</span>
+                        </div>
+                        <div class="tc-items">
+                            <div class="tc-item"
+                                data-app="Applied in: AI Ticket Classifier, Food Delivery backend, and data preprocessing scripts">
+                                <span class="tc-name">Python</span>
+                                <span class="tc-pill">Primary</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="NPTEL IIT Kharagpur certified: Problem Solving through Programming in C">
+                                <span class="tc-name">C</span>
+                                <span class="tc-pill">Certified</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: Core Object-Oriented Programming and academic coursework">
+                                <span class="tc-name">Java (Basic)</span>
+                                <span class="tc-pill">Core</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: Relational schemas, SQLite queries, and NPTEL Elite certification">
+                                <span class="tc-name">SQL</span>
+                                <span class="tc-pill">Database</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web & Backend -->
+                    <div class="toolkit-card card-blue">
+                        <div class="tc-header">
+                            <i class="fa-solid fa-server"></i>
+                            <span>Web & Backend</span>
+                        </div>
+                        <div class="tc-items">
+                            <div class="tc-item"
+                                data-app="Applied in: Ethical Hacking Portal and AI Ticket System Backend">
+                                <span class="tc-name">FastAPI</span>
+                                <span class="tc-pill">REST API</span>
+                            </div>
+                            <div class="tc-item" data-app="Applied in: Food Ordering & Delivery Web Application">
+                                <span class="tc-name">Flask</span>
+                                <span class="tc-pill">Backend</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: Live real-time ML inference and analytics dashboards">
+                                <span class="tc-name">Streamlit</span>
+                                <span class="tc-pill">Dashboard</span>
+                            </div>
+                            <div class="tc-item" data-app="Infosys Springboard certified frontend development stack">
+                                <span class="tc-name">HTML5 / CSS3 / JS</span>
+                                <span class="tc-pill">Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning & AI -->
+                    <div class="toolkit-card card-lavender">
+                        <div class="tc-header">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>Machine Learning & AI</span>
+                        </div>
+                        <div class="tc-items">
+                            <div class="tc-item"
+                                data-app="Applied in: Intent classification and semantic embeddings for support tickets">
+                                <span class="tc-name">BERT / NLP</span>
+                                <span class="tc-pill">NLP</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: Named entity recognition and text preprocessing pipelines">
+                                <span class="tc-name">SpaCy & NLTK</span>
+                                <span class="tc-pill">NLP</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: SVM, Random Forest, Logistic Regression, XGBoost & SMOTE">
+                                <span class="tc-name">Scikit-Learn</span>
+                                <span class="tc-pill">ML Pipeline</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: Industrial dataset analysis during NeST Digital internship">
+                                <span class="tc-name">Pandas / NumPy</span>
+                                <span class="tc-pill">Data Science</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Security -->
+                    <div class="toolkit-card card-sage">
+                        <div class="tc-header">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>Tools, Security & IoT</span>
+                        </div>
+                        <div class="tc-items">
+                            <div class="tc-item"
+                                data-app="Applied in: Containerized sandboxing for cybersecurity lab simulations">
+                                <span class="tc-name">Docker</span>
+                                <span class="tc-pill">DevOps</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: 9+ interactive web exploit challenges (SQLi, XSS, CSRF)">
+                                <span class="tc-name">Web Security</span>
+                                <span class="tc-pill">Security</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: SAHYA'26 Cyfusion UI/UX competition finalist prototypes">
+                                <span class="tc-name">Figma</span>
+                                <span class="tc-pill">Design</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: GeoSentinel landslide disaster early warning and long-range sub-GHz telemetry">
+                                <span class="tc-name">ESP32 & LoRa</span>
+                                <span class="tc-pill">Embedded IoT</span>
+                            </div>
+                            <div class="tc-item"
+                                data-app="Applied in: Version control, GitHub repositories, and open collaboration">
+                                <span class="tc-name">Git & GitHub</span>
+                                <span class="tc-pill">Workflow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Context Bar -->
+                <div class="toolkit-context-bar" id="toolkit-context-bar">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span id="toolkit-context-msg">Hover or tap any skill above to view its real-world project
+                        context.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. JOURNEY TIMELINE (EDUCATION) -->
+        <section id="journey" class="section-block bg-subtle journey-story-section">
+            <div class="pastel-decor-shape decor-sage decor-blob-4" aria-hidden="true"></div>
+            <!-- Scrapbook Curved Doodle Accent -->
+            <svg class="scrapbook-decor decor-curve-1" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="50" stroke="#7c6bb5" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.35"/>
+                <circle cx="60" cy="60" r="32" stroke="#a85966" stroke-width="1.2" opacity="0.25"/>
+            </svg>
+            <div class="section-inner">
+                <div class="section-chapter">
+                    <span class="chapter-badge">04 / JOURNEY</span>
+                    <h2 class="section-heading">My Journey</h2>
+                    <div class="chapter-divider"></div>
+                </div>
+
+                <p class="section-subtitle">
+                    A scrapbook timeline of my academic milestones and formal education.
+                </p>
+
+                <div class="timeline-stack" id="timeline-stack">
+                    <!-- Progress Stem Line -->
+                    <div class="timeline-stem-track" aria-hidden="true">
+                        <div class="timeline-stem-progress" id="timeline-progress-bar"></div>
+                    </div>
+
+                    <!-- 1. B.Tech (2023 - Present): Dusty Rose Accent -->
+                    <div class="timeline-row row-rose" data-year="2023–27" data-step="0">
+                        <div class="tr-year">2023</div>
+                        <div class="tr-node">
+                            <span class="tr-dot"></span>
+                            <span class="tr-branch"></span>
+                        </div>
+                        <div class="tr-card-wrapper">
+                            <div class="tr-card">
+                                <div class="tr-card-head">
+                                    <div>
+                                        <span class="tr-badge">Bachelor of Technology (B.Tech)</span>
+                                        <h4 class="tr-title">Amal Jyothi College of Engineering (Autonomous)</h4>
+                                    </div>
+                                    <span class="tr-date">2023 – 2027 (Present)</span>
+                                </div>
+                                <p class="tr-desc">
+                                    Pursuing <strong>B.Tech in Computer Science & Engineering</strong> at Kanjirappally, Kerala.<br>
+                                    <span style="display:inline-block; margin-top:0.4rem; font-weight:600; color:var(--rose-primary);">
+                                        <i class="fa-solid fa-chart-line"></i> Current CGPA: 9.29 / 10.00
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Class XII (2021 - 2023): Lavender Accent -->
+                    <div class="timeline-row row-lavender" data-year="2023" data-step="1">
+                        <div class="tr-year">2023</div>
+                        <div class="tr-node">
+                            <span class="tr-dot"></span>
+                            <span class="tr-branch"></span>
+                        </div>
+                        <div class="tr-card-wrapper">
+                            <div class="tr-card">
+                                <div class="tr-card-head">
+                                    <div>
+                                        <span class="tr-badge">Senior Secondary (Class XII CBSE)</span>
+                                        <h4 class="tr-title">St. Antony's Public School, Anakkal</h4>
+                                    </div>
+                                    <span class="tr-date">Graduated 2023</span>
+                                </div>
+                                <p class="tr-desc">
+                                    Completed Class XII (Senior Secondary Education, CBSE) in the <strong>Science Stream</strong>.<br>
+                                    <span style="display:inline-block; margin-top:0.4rem; font-weight:600; color:var(--lavender-accent);">
+                                        <i class="fa-solid fa-award"></i> Percentage: 86.6%
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Class X (2020 - 2021): Powder Blue Accent -->
+                    <div class="timeline-row row-blue" data-year="2021" data-step="2">
+                        <div class="tr-year">2021</div>
+                        <div class="tr-node">
+                            <span class="tr-dot"></span>
+                            <span class="tr-branch"></span>
+                        </div>
+                        <div class="tr-card-wrapper">
+                            <div class="tr-card">
+                                <div class="tr-card-head">
+                                    <div>
+                                        <span class="tr-badge">Secondary Education (Class X CBSE)</span>
+                                        <h4 class="tr-title">St. Antony's Public School, Anakkal</h4>
+                                    </div>
+                                    <span class="tr-date">Graduated 2021</span>
+                                </div>
+                                <p class="tr-desc">
+                                    Completed Class X (All India Secondary School Examination, CBSE) with academic distinction.<br>
+                                    <span style="display:inline-block; margin-top:0.4rem; font-weight:600; color:var(--blue-accent);">
+                                        <i class="fa-solid fa-star"></i> Percentage: 95.4%
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. LEADERSHIP SECTION -->
+        <section id="leadership" class="section-block bg-subtle leadership-section">
+            <div class="pastel-decor-shape decor-lavender decor-blob-5" aria-hidden="true"></div>
+            <div class="section-inner">
+                <div class="section-chapter">
+                    <span class="chapter-badge">05 / LEADERSHIP & INITIATIVES</span>
+                    <h2 class="section-heading">Leadership & Campus Life</h2>
+                    <div class="chapter-divider"></div>
+                </div>
+
+                <div class="leadership-header-row">
+                    <p class="section-subtitle">
+                        Driving student initiatives, organizing flagship tech & cultural fests, and fostering peer-learning developer communities at Amal Jyothi College of Engineering.
+                    </p>
+                    <div class="leadership-filter-pills" role="tablist" aria-label="Filter leadership initiatives">
+                        <button class="filter-pill active" data-filter="all">All Initiatives</button>
+                        <button class="filter-pill" data-filter="techfest">SAHYA Tech Fest</button>
+                        <button class="filter-pill" data-filter="council">Students' Council</button>
+                        <button class="filter-pill" data-filter="community">Blankspace Community</button>
+                        <button class="filter-pill" data-filter="cultural">Azure Cultural Fest</button>
+                    </div>
+                </div>
+
+                <div class="leadership-cards-grid">
+                    <!-- 1. SAHYA Tech Fest - Cyfusion Event Coordinator -->
+                    <article class="leadership-card card-sage" data-category="techfest">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-sage">
+                                <i class="fa-solid fa-microchip"></i>
+                                <span>SAHYA TECH FEST • CYFUSION</span>
+                            </div>
+                            <span class="lc-term">2026</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">Event Coordinator & Organizer — Cyfusion</h3>
+                            <p class="lc-org"><i class="fa-solid fa-building-columns"></i> Amal Jyothi College of Engineering (Autonomous)</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            Served as the lead student coordinator for <strong>Cyfusion</strong>, the premier cybersecurity & UI/UX challenge track at the national-level annual tech fest <em>SAHYA</em>. Directed competition round design, live evaluation pipelines, participant logistics, and stage valedictory presentations.
+                        </p>
+
+                        <!-- Key Responsibilities & Highlights -->
+                        <div class="lc-highlights-block">
+                            <div class="lc-highlights-heading">
+                                <i class="fa-solid fa-sparkles"></i>
+                                <span>Key Responsibilities & Impact</span>
+                            </div>
+                            <ul class="lc-bullets-list">
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Curated and executed dual competition rounds: Round 1 Speed Cybersecurity & Round 2 Figma UI/UX Design Sprint.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Led a 12-member student volunteer committee, managing schedules, IT lab setups, and live scoring for 150+ participants.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Presented valedictory awards and certificates on the main stage alongside department dignitaries and faculty heads.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="lc-gallery-preview lc-gallery-dual">
+                            <div class="lc-gallery-item" data-full="./leadership/sahya-stage.png" data-caption="Stage Prize & Certificate Distribution Ceremony at SAHYA'26 alongside Faculty & Dignitaries" data-tag="Valedictory Presentation">
+                                <img src="./leadership/sahya-stage.png" alt="SAHYA Tech Fest Stage Presentation Ceremony" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Stage Ceremony</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./leadership/sahya-badge.png" data-caption="Official SAHYA Event Badges for Neha Miriam Jose & Cyfusion Event Team" data-tag="Event Coordination">
+                                <img src="./leadership/sahya-badge.png" alt="SAHYA Cyfusion Event Badges" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Event Badges</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-sage">Event Management</span>
+                            <span class="lc-tag tag-sage">Cybersecurity Challenges</span>
+                            <span class="lc-tag tag-sage">Public Speaking</span>
+                            <span class="lc-tag tag-sage">Team Coordination</span>
+                        </div>
+                    </article>
+
+                    <!-- 2. Students' Council Representative -->
+                    <article class="leadership-card card-blue" data-category="council">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-blue">
+                                <i class="fa-solid fa-users-gear"></i>
+                                <span>STUDENT GOVERNANCE</span>
+                            </div>
+                            <span class="lc-term">2024 – Present</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">Department Student Council Representative</h3>
+                            <p class="lc-org"><i class="fa-solid fa-building-columns"></i> Students' Council • Amal Jyothi College of Engineering</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            Elected to represent the Department of Computer Science & Engineering in the central Students' Council. Acting as the primary bridge between the student body, academic faculty, and college administration to champion student initiatives, organize technical seminars, and coordinate department events.
+                        </p>
+
+                        <!-- Key Responsibilities & Highlights -->
+                        <div class="lc-highlights-block">
+                            <div class="lc-highlights-heading">
+                                <i class="fa-solid fa-sparkles"></i>
+                                <span>Key Responsibilities & Impact</span>
+                            </div>
+                            <ul class="lc-bullets-list">
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Representing 400+ Computer Science undergraduates in central Students' Council governance meetings.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Coordinated 15+ academic seminars, technical workshops, industry guest lectures, and department welcome orientations.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Delivered auditorium keynote speeches and classroom addresses to communicate student initiatives and academic updates.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Gallery Thumbnails (3 Photos) -->
+                        <div class="lc-gallery-preview lc-gallery-trio">
+                            <div class="lc-gallery-item" data-full="./leadership/council-speech.png" data-caption="Neha Miriam Jose addressing student assembly at Amal Jyothi College of Engineering" data-tag="Keynote Address">
+                                <img src="./leadership/council-speech.png" alt="Neha Miriam Jose Keynote Speech at Auditorium" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Keynote Address</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./leadership/council-classroom.jpg" data-caption="Department Student Council Classroom Assembly Address" data-tag="Classroom Assembly">
+                                <img src="./leadership/council-classroom.jpg" alt="Classroom Assembly Address" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Classroom Address</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./leadership/council-session.jpeg" data-caption="Interactive Department Council Session with student cohorts" data-tag="Council Session">
+                                <img src="./leadership/council-session.jpeg" alt="Interactive Department Council Session" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Department Session</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-blue">Student Representation</span>
+                            <span class="lc-tag tag-blue">Public Speaking</span>
+                            <span class="lc-tag tag-blue">Department Leadership</span>
+                            <span class="lc-tag tag-blue">Campus Governance</span>
+                        </div>
+                    </article>
+
+                    <!-- 3. Blankspace Coding Community -->
+                    <article class="leadership-card card-lavender" data-category="community">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-lavender">
+                                <i class="fa-solid fa-code-commit"></i>
+                                <span>DEV COMMUNITY & WORKSHOPS</span>
+                            </div>
+                            <span class="lc-term">2024 – Present</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">Core Community Member & Workshop Instructor</h3>
+                            <p class="lc-org"><i class="fa-solid fa-laptop-code"></i> Blankspace Student Developer Community</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            Active lead member of <strong>blankspace</strong>, the student-led software development and coding club. Conducted hands-on technical training sessions, peer coding masterclasses in C and Java fundamentals, and mentored junior students in data structures and algorithmic thinking.
+                        </p>
+
+                        <!-- Key Responsibilities & Highlights -->
+                        <div class="lc-highlights-block">
+                            <div class="lc-highlights-heading">
+                                <i class="fa-solid fa-sparkles"></i>
+                                <span>Key Responsibilities & Impact</span>
+                            </div>
+                            <ul class="lc-bullets-list">
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Delivered technical bootcamps in C programming fundamentals, memory pointers, and Java OOP for 100+ students.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Authored curated algorithmic problem sets and conducted peer code reviews to build algorithmic problem-solving confidence.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Awarded Certificate of Recognition for outstanding workshop instruction and peer developer mentorship.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="lc-gallery-preview lc-gallery-dual">
+                            <div class="lc-gallery-item" data-full="./leadership/blankspace-team.png" data-caption="Blankspace Core Community & Coding Club Team at Central Complex, Amal Jyothi College of Engineering" data-tag="Community Team">
+                                <img src="./leadership/blankspace-team.png" alt="Blankspace Tech Community Team at Central Complex" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Community Team</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./leadership/blankspace-cert.jpeg" data-caption="Neha Miriam Jose receiving Certificate of Recognition for Technical Workshop Leadership" data-tag="Certificate of Recognition">
+                                <img src="./leadership/blankspace-cert.jpeg" alt="Neha Miriam Jose receiving Workshop Certificate of Recognition" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Workshop Award</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-lavender">Peer Tutoring</span>
+                            <span class="lc-tag tag-lavender">Code Workshops</span>
+                            <span class="lc-tag tag-lavender">Hands-on Mentorship</span>
+                            <span class="lc-tag tag-lavender">Community Building</span>
+                        </div>
+                    </article>
+
+                    <!-- 4. AZURE '26 - Cultural Fest & Theme Show -->
+                    <article class="leadership-card card-pink" data-category="cultural">
+                        <div class="lc-accent-line"></div>
+                        <div class="lc-card-header">
+                            <div class="lc-badge-pill badge-pink">
+                                <i class="fa-solid fa-masks-theater"></i>
+                                <span>AZURE '26 CULTURAL FEST</span>
+                            </div>
+                            <span class="lc-term">2026</span>
+                        </div>
+
+                        <div class="lc-title-block">
+                            <h3 class="lc-title">Event Coordinator — Internal Theme Show</h3>
+                            <p class="lc-org"><i class="fa-solid fa-building-columns"></i> AZURE '26 • Amal Jyothi College of Engineering</p>
+                        </div>
+
+                        <p class="lc-desc">
+                            Coordinated the flagship <strong>Internal Theme Show & Theatrical Ramp Presentation</strong> at <em>AZURE '26</em>, the college's grand arts and cultural festival. Managed stage scheduling, thematic costume lineups, backstage technical cues, and audio-visual transitions before an audience of over 2,000+ students.
+                        </p>
+
+                        <!-- Key Responsibilities & Highlights -->
+                        <div class="lc-highlights-block">
+                            <div class="lc-highlights-heading">
+                                <i class="fa-solid fa-sparkles"></i>
+                                <span>Key Responsibilities & Impact</span>
+                            </div>
+                            <ul class="lc-bullets-list">
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Directed stage choreography, ramp lineups, and backstage scheduling for 40+ student performers and models.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Synchronized dynamic theatrical lighting presets, AV soundtracks, and LED visual cues in real-time.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-circle-check lc-check"></i>
+                                    <span>Managed audience crowd coordination and green room logistics for a prime-time audience of over 2,000+ students.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="lc-gallery-preview lc-gallery-trio">
+                            <div class="lc-gallery-item" data-full="./leadership/azure-performance.png" data-caption="Theatrical Theme Show Stage Performance & Cast Ensemble at AZURE '26" data-tag="Theme Performance">
+                                <img src="./leadership/azure-performance.png" alt="AZURE 26 Theatrical Theme Show Performance" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Theatrical Stage</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./leadership/azure-stage.png" data-caption="Dynamic Ramp Show & Lighting Production on the Main Stage at AZURE '26" data-tag="Ramp & Stage Lighting">
+                                <img src="./leadership/azure-stage.png" alt="AZURE 26 Ramp Show and Stage Lighting" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Ramp Production</span>
+                                </div>
+                            </div>
+                            <div class="lc-gallery-item" data-full="./leadership/azure-badge.png" data-caption="Official AZURE'26 Event Coordinator ID Badge — Internal Theme Show" data-tag="Coordinator Badge">
+                                <img src="./leadership/azure-badge.png" alt="AZURE 26 Event Coordinator ID Badge" loading="lazy">
+                                <div class="lc-img-overlay">
+                                    <span class="lc-overlay-icon"><i class="fa-solid fa-expand"></i></span>
+                                    <span class="lc-overlay-text">Official Badge</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lc-footer-tags">
+                            <span class="lc-tag tag-pink">Stage Production</span>
+                            <span class="lc-tag tag-pink">Logistics Scheduling</span>
+                            <span class="lc-tag tag-pink">Creative Direction</span>
+                            <span class="lc-tag tag-pink">Large Audience Event</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. MILESTONES -->
+        <section id="milestones" class="section-block">
+            <!-- Scrapbook Soft Ring -->
+            <svg class="scrapbook-decor decor-ring-2" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="48" stroke="#438e80" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.3"/>
+                <circle cx="60" cy="60" r="28" stroke="#c96571" stroke-width="1" opacity="0.2"/>
+            </svg>
+            <div class="section-inner">
+                <div class="section-chapter">
+                    <span class="chapter-badge">06 / MILESTONES</span>
+                    <h2 class="section-heading">Achievements & Recognitions</h2>
+                    <div class="chapter-divider"></div>
+                </div>
+
+                <div class="milestones-grid">
+                    <div class="milestone-card m-pink">
+                        <div class="mc-icon"><i class="fa-solid fa-star"></i></div>
+                        <h3 class="mc-heading">Academic Distinction — CGPA 9.29</h3>
+                        <p class="mc-desc">Consistent top-tier academic standing in B.Tech Computer Science &
+                            Engineering at Amal Jyothi College of Engineering (Autonomous).</p>
+                    </div>
+
+                    <div class="milestone-card m-blue">
+                        <div class="mc-icon"><i class="fa-solid fa-medal"></i></div>
+                        <h3 class="mc-heading">NPTEL Elite (IIT Kharagpur)</h3>
+                        <p class="mc-desc">Awarded Elite category certificate in Database Management Systems from NPTEL
+                            (IIT Kharagpur) in 2025.</p>
+                    </div>
+
+                    <div class="milestone-card m-sage">
+                        <div class="mc-icon"><i class="fa-solid fa-palette"></i></div>
+                        <h3 class="mc-heading">Cyfusion SAHYA'26 Finalist</h3>
+                        <p class="mc-desc">Recognized in the UI/UX design competition for prototyping functional digital
+                            interfaces in Figma (2026).</p>
+                    </div>
+
+                    <div class="milestone-card m-lavender">
+                        <div class="mc-icon"><i class="fa-solid fa-user-check"></i></div>
+                        <h3 class="mc-heading">Academic References</h3>
+                        <p class="mc-desc">Dr. Juby Mathew (HOD, CSE) and Prof. Bini M Issac (Assistant Professor, CSE)
+                            at Amal Jyothi College of Engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07. CONNECT SECTION -->
+        <section id="contact" class="section-block bg-subtle">
+            <div class="pastel-decor-shape decor-peach decor-blob-5" aria-hidden="true"></div>
+            <div class="section-inner">
+                <div class="section-chapter">
+                    <span class="chapter-badge">07 / CONNECT</span>
+                    <h2 class="section-heading">Get in Touch</h2>
+                    <div class="chapter-divider"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Details -->
+                    <div class="contact-info-col">
+                        <h3 class="contact-title">
+                            Open to internship opportunities, software projects, and engineering collaborations.
+                        </h3>
+                        <p class="contact-desc">
+                            Whether you have an inquiry, an internship opportunity, or would just like to say hello,
+                            feel free to reach out directly through any channel below.
+                        </p>
+
+                        <div class="contact-cards-list">
+                            <a href="mailto:nehamiriamjose05@gmail.com" class="c-link-card cl-pink">
+                                <div class="cl-icon"><i class="fa-regular fa-envelope"></i></div>
+                                <div class="cl-body">
+                                    <span class="cl-label">Email</span>
+                                    <span class="cl-val">nehamiriamjose05@gmail.com</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square cl-arrow"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/nehmiriamjose-6882312a8" target="_blank"
+                                rel="noopener noreferrer" class="c-link-card cl-blue">
+                                <div class="cl-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <div class="cl-body">
+                                    <span class="cl-label">LinkedIn</span>
+                                    <span class="cl-val">in/nehmiriamjose-6882312a8</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square cl-arrow"></i>
+                            </a>
+
+                            <a href="https://github.com/nehamiriamjose" target="_blank" rel="noopener noreferrer"
+                                class="c-link-card cl-sage">
+                                <div class="cl-icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="cl-body">
+                                    <span class="cl-label">GitHub</span>
+                                    <span class="cl-val">github.com/nehamiriamjose</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square cl-arrow"></i>
+                            </a>
+
+                            <div class="c-link-card cl-peach">
+                                <div class="cl-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="cl-body">
+                                    <span class="cl-label">Location</span>
+                                    <span class="cl-val">Kanjirappally, Kerala, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="contact-form-col">
+                        <div class="form-wrapper-card">
+                            <h4 class="form-heading">Send a Direct Message</h4>
+                            <form id="contact-form" class="studio-contact-form">
+                                <div class="form-dual-row">
+                                    <div class="form-group">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" id="email" name="email" placeholder="john@example.com"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject"
+                                        placeholder="Internship Opportunity / Project Inquiry" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        placeholder="Hello Neha, I'd like to discuss..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn-submit-pill">
+                                    <span>Send Message</span>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </button>
+                                <div id="form-feedback" class="form-feedback"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="studio-footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <span class="footer-brand-name">Neha Miriam Jose</span>
+                <span class="footer-sub">Computer Science Engineer • Amal Jyothi College of Engineering • 2026</span>
+            </div>
+            <div class="footer-right">
+                <a href="#home" class="btn-back-to-top">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Project Details Pop-out Modal Dialog -->
+    <div id="project-modal" class="project-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+        <div class="project-modal-dialog">
+            <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Details">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content-scroll" id="modal-dynamic-content">
+                <!-- Populated by main.js dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Universal Media Lightbox -->
+    <div id="leadership-lightbox" class="leadership-lightbox-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Media Viewer">
+        <div class="lightbox-dialog">
+            <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Close media viewer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="lightbox-media-box">
+                <img id="lightbox-img" src="" alt="" class="lightbox-image">
+                <video id="lightbox-video" controls playsinline class="lightbox-video" style="display:none; max-width:100%; max-height:65vh; width:100%; background:#000;"></video>
+            </div>
+            <div class="lightbox-footer">
+                <div class="lightbox-tag" id="lightbox-tag">Initiative Photo</div>
+                <p class="lightbox-caption" id="lightbox-caption">Caption</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
