@@ -224,46 +224,124 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 number: "02",
-                category: "Machine Learning & NLP",
-                accent: "blue",
-                title: "AI-Powered Ticket Classification System",
-                image: "./ticket_classification.jpg",
-                imageAlt: "AI-Powered Ticket Classification System Dashboard",
+                category: "Deep Learning, Audio Signal Processing & Ensemble Learning",
+                accent: "lavender",
+                title: "Beyond the Illusion: Ensemble Learning for Effective Voice Deepfake Detection",
+                image: "./deepfake_audio_dashboard.jpg",
+                imageAlt: "Deepfake Audio Detection System UI & Spectrogram Analysis",
+                author: "Neha Miriam Jose",
+                repoName: "nehamiriamjose/deepfake-audio-detection",
                 stats: [
-                    { num: "94.2%", label: "Classification Accuracy", desc: "Multi-class intent classification" },
-                    { num: "5+", label: "Priority Classes", desc: "Automated urgency triage" },
-                    { num: "<120ms", label: "Inference Latency", desc: "High-throughput FastAPI endpoint" },
-                    { num: "BERT", label: "Transformer Backbone", desc: "Fine-tuned contextual embeddings" }
+                    { num: "(26, 128)", label: "Feature Matrix", desc: "13 MFCC + 12 Chroma + 1 ZCR channels" },
+                    { num: "4 Models", label: "Deep Neural Suite", desc: "RNN, 1D-CNN, LSTM & ConvLSTM" },
+                    { num: "5 Subsets", label: "FoR Dataset", desc: "Original, Norm, 2sec, Rerec & Merged" },
+                    { num: "Dual", label: "Ensemble Voting", desc: "Soft (Probability) & Hard (Majority)" },
+                    { num: "500/Batch", label: "NPZ Batch Extractor", desc: "Optimized Librosa feature pipeline" }
                 ],
                 mediaItems: [
                     {
                         type: "image",
-                        src: "./ticket_classification.jpg",
-                        tabLabel: "Analytics Dashboard",
-                        icon: "fa-solid fa-chart-line",
-                        title: "Real-Time Ticket Analytics & Triage Dashboard",
-                        caption: "Interactive Streamlit analytics dashboard monitoring live query volume, category breakdown distributions, priority confidence scores, and SLA compliance metrics."
+                        src: "./deepfake_audio_dashboard.jpg",
+                        tabLabel: "Audio DSP & Detection UI",
+                        icon: "fa-solid fa-wave-square",
+                        title: "Acoustic Feature Extraction & Real-Time Classification Dashboard",
+                        caption: "Live web inference interface displaying interactive audio waveform visualizer, 26x128 combined acoustic feature heatmap (13 MFCCs, 12 Chroma pitch classes, 1 Zero Crossing Rate), Short-Time Fourier Transform (STFT) spectrogram, Real vs Fake detection score, and FoR batch processing telemetry."
+                    },
+                    {
+                        type: "image",
+                        src: "./deepfake_ensemble_architecture.jpg",
+                        tabLabel: "Ensemble Deep Learning Architecture",
+                        icon: "fa-solid fa-network-wired",
+                        title: "4-Model Deep Neural Network Suite & FoR Dataset Benchmarks",
+                        caption: "Comprehensive deep learning ensemble pipeline feeding standardized (26, 128) acoustic matrices through RNN, 1D-CNN, LSTM, and ConvLSTM branches into Soft Voting (probability averaging) and Hard Voting (majority consensus) decision engines alongside ROC-AUC, Confusion Matrix, and FoR subset evaluations."
                     }
                 ],
-                about: "An intelligent enterprise customer support automation pipeline engineered to ingest multi-channel customer queries, predict priority levels with machine learning classifiers, extract key entities using SpaCy, and present real-time inference telemetry through an interactive dashboard.",
+                about: "Beyond the Illusion is a deep learning voice forensics and acoustic signal processing system engineered to detect synthetic, AI-generated, and cloned human speech. As generative AI voice cloning models reach unprecedented fidelity, distinguishing authentic vocal timbre from manipulated audio has become critical for voice biometrics, fraud prevention, and digital security. This system implements an end-to-end pipeline: extracting multi-domain acoustic characteristics (MFCCs, Chroma pitch classes, and Zero Crossing Rate) into a standardized (26, 128) feature representation, training four distinct deep neural architectures (RNN, 1D-CNN, LSTM, ConvLSTM), and synthesizing predictions using Soft and Hard Voting ensemble mechanisms with real-time web deployment.",
                 features: [
-                    "Multi-label automated query classification leveraging fine-tuned BERT and ensemble XGBoost / Logistic Regression models.",
-                    "Containerized FastAPI asynchronous backend with SQLite relational schema for request triage and logging.",
-                    "SMOTE class balancing and automated feature engineering pipelines utilizing scikit-learn and pandas.",
-                    "Interactive Streamlit analytics dashboard monitoring query throughput, confidence scores, and priority breakdowns."
+                    "Multi-Domain Acoustic Feature Extraction: Computes 13 Mel-Frequency Cepstral Coefficients (MFCC), 12 Chroma pitch energy classes, and 1 Zero Crossing Rate (ZCR) per time frame using Librosa at 22,050 Hz (N_FFT = 2048, Hop Length = 512).",
+                    "Dimension Standardization & Normalization: Standardizes varying audio durations into a uniform matrix of 26 feature channels × 128 time frames via temporal truncation and zero-padding, followed by z-score normalization ((x - μ) / σ).",
+                    "High-Throughput Batch Processing Engine: High-performance audio feature extraction pipeline processing audio in structured batches of 500 files and serializing standardized tensors into compressed NumPy .npz formats.",
+                    "4 Heterogeneous Deep Neural Architectures: Parallel evaluation of Recurrent Neural Networks (RNN) for sequential temporal tracking, 1D-CNN for localized spectral pattern filters, Long Short-Term Memory (LSTM) for long-range temporal dependencies, and ConvLSTM for joint spatial-temporal modeling.",
+                    "Dual-Strategy Ensemble Decision Engine: Implements Soft Voting (averaging predicted class probabilities P(Fake) across models) and Hard Voting (majority class consensus) to achieve superior generalization over individual base classifiers.",
+                    "FoR Multi-Subset Benchmarking: Comprehensive evaluation across 5 Fake-or-Real (FoR) dataset subsets: for-original, for-norm (normalized), for-2sec (2-second slices), for-rerec (re-recorded acoustic variations), and for-merged (combined multi-source corpus).",
+                    "Rigorous Forensics Evaluation: Assessed with classification Accuracy, Precision, Recall, F1-Score, ROC-AUC curves, Equal Error Rate (EER), and Confusion Matrices to guarantee minimal false-positive rates on authentic human voices.",
+                    "End-to-End Web Inference Interface: Interactive web portal enabling users to upload raw audio recordings (.mp3 / .wav), extract real-time acoustic features, run ensemble model inference, and inspect Real/Fake confidence telemetry."
                 ],
                 archHighlights: [
-                    { icon: "fa-solid fa-brain", title: "BERT Transformer NLP", desc: "Fine-tuned contextual embeddings for extracting domain intent from unstructured customer service inquiries." },
-                    { icon: "fa-solid fa-server", title: "FastAPI REST Server", desc: "Low-latency REST endpoints delivering real-time predictions and automated ticket routing." },
-                    { icon: "fa-solid fa-scale-balanced", title: "SMOTE Class Balancing", desc: "Synthesizes minority class samples to ensure high recall for rare critical urgency issues." },
-                    { icon: "fa-solid fa-chart-pie", title: "Streamlit Telemetry Hub", desc: "Live operational view of incoming support volume, resolution times, and model accuracy metrics." }
+                    { icon: "fa-solid fa-wave-square", title: "Acoustic Signal Processing (DSP)", desc: "Extracts 13 MFCC spectral envelopes, 12 Chroma octave pitch distributions, and 1 ZCR sign-flip metric into a unified (26, 128) matrix." },
+                    { icon: "fa-solid fa-cubes-stacked", title: "4 Deep Learning Architectures", desc: "Heterogeneous neural network suite (RNN, 1D-CNN, LSTM, ConvLSTM) engineered to capture both spectral frequency nuances and temporal cadence." },
+                    { icon: "fa-solid fa-scale-balanced", title: "Soft & Hard Voting Consensus", desc: "Dual ensemble decision layers combining continuous probability estimates and discrete majority votes to minimize individual model bias." },
+                    { icon: "fa-solid fa-database", title: "Fake-or-Real (FoR) Corpus", desc: "Trained and benchmarked across 5 specialized dataset configurations covering original recordings, normalized audio, 2-sec clips, and re-recorded environments." }
                 ],
-                pipeline: ["Raw Ticket Ingestion", "SpaCy Entity Extraction", "BERT / XGBoost Classifier", "FastAPI Triage Routing", "Streamlit Analytics"],
-                technologies: ["Python 3.10", "BERT / PyTorch", "FastAPI", "Streamlit", "SQLite3", "Scikit-Learn", "SpaCy NLP", "NLTK", "Pandas"],
+                pipeline: ["Audio Ingestion (22.05 kHz)", "MFCC + Chroma + ZCR Extraction", "Dimension Standardization (26, 128)", "Batch NPZ Serialization", "4-Model Neural Inference", "Soft / Hard Voting Ensemble", "Real/Fake Web Telemetry"],
+                technologies: ["Python 3.10", "Librosa DSP", "TensorFlow / Keras", "NumPy & SciPy", "Scikit-Learn", "Matplotlib & Seaborn", "Ensemble Voting", "Fake-or-Real (FoR)", "Audio Signal Processing", "Web UI Deployment"],
                 github: "https://github.com/nehamiriamjose"
             },
             {
                 number: "03",
+                category: "Machine Learning, NLP & Support Automation",
+                accent: "blue",
+                title: "AI-Powered Ticket Creation & Categorisation from User Input",
+                image: "./project/ai-ticket/user-part.mp4",
+                imageAlt: "AI-Powered Ticket Creation and Categorisation Video Demos",
+                author: "Neha Miriam Jose",
+                repoName: "nehamiriamjose/ai-ticket-creation-categorisation",
+                reportUrl: "./project/ai-ticket/project-report.pdf",
+                stats: [
+                    { num: "47,837", label: "Dataset Scale", desc: "Enterprise IT support tickets processed" },
+                    { num: "85.7%", label: "Topic Accuracy", desc: "Best-in-class XGBoost classifier (85.8% F1)" },
+                    { num: "8 Topics", label: "Category Triage", desc: "Hardware, Access, Storage, Admin, HR & more" },
+                    { num: "3 Tiers", label: "Priority & SLA", desc: "High, Medium, Low with auto-deadlines" },
+                    { num: "5 Models", label: "Classifier Suite", desc: "Evaluated XGBoost, SVM, LR, RF & Naive Bayes" }
+                ],
+                mediaItems: [
+                    {
+                        type: "video",
+                        src: "./project/ai-ticket/user-part.mp4",
+                        tabLabel: "User Portal (Video Demo)",
+                        icon: "fa-solid fa-circle-play",
+                        title: "Student / User Complaint Submission Walkthrough",
+                        caption: "Live user walkthrough: interactive complaint submission, SpaCy NER extraction, real-time AI classification preview, and automatic ticket generation."
+                    },
+                    {
+                        type: "video",
+                        src: "./project/ai-ticket/support-part.mp4",
+                        tabLabel: "Support Console (Video Demo)",
+                        icon: "fa-solid fa-headset",
+                        title: "Support Engineer Queue & SLA Triage Walkthrough",
+                        caption: "Live support team walkthrough: active queue filtering, SLA urgency countdown tracking, status progression, and ticket resolution logs."
+                    },
+                    {
+                        type: "video",
+                        src: "./project/ai-ticket/admin-part.mp4",
+                        tabLabel: "Admin Governance (Video Demo)",
+                        icon: "fa-solid fa-shield-halved",
+                        title: "Administrative Control Center & Analytics Walkthrough",
+                        caption: "Platform administrator walkthrough: multi-tier queue analytics, XGBoost model telemetry, database operations, and system-wide SLA compliance reports."
+                    }
+                ],
+                about: "AI-Powered Ticket Creation and Categorisation is an enterprise machine learning and natural language processing system engineered to transform raw, unstructured user complaints into structured, triaged IT support tickets. Trained and benchmarked on a real-world corpus of 47,837 IT support tickets, the system combines multi-class topic classification (comparing 5 machine learning architectures), urgency priority ranking enhanced with SMOTE class balancing, custom SpaCy Named Entity Recognition (NER), an asynchronous FastAPI REST backend, and a 3-role Streamlit management portal with automated SLA tracking.",
+                features: [
+                    "Comparative ML Classifier Benchmark: Evaluated 5 diverse algorithms (XGBoost, Linear SVM, Logistic Regression, Random Forest, and Multinomial Naive Bayes) on TF-IDF feature matrices, selecting XGBoost (85.7% accuracy / 0.858 macro F1) as the production topic classifier.",
+                    "SMOTE Class Balancing: Implemented Synthetic Minority Over-sampling Technique (imbalanced-learn) to counteract severe class imbalances in high-urgency ticket samples, ensuring high recall for mission-critical operational incidents.",
+                    "Custom SpaCy Named Entity Recognition (NER): Extracted domain-specific entities (user identities, software/hardware models, system error codes, and priority cues) directly from raw, messy natural language inputs.",
+                    "Milestone 3 Automated Ticket Generation Engine: Synthesizes unstructured user problem descriptions into structured tickets with concise formulated titles, mapped topic categories, priority confidence scores, and SLA target deadlines.",
+                    "High-Throughput FastAPI REST Backend: Asynchronous ASGI API exposing /generate-ticket endpoints with Pydantic validation, error handling, and SQLite relational persistence.",
+                    "Role-Based 3-Tier Streamlit Portal: Dedicated user interfaces for regular Users (interactive ticket submission with real-time AI preview), Support Team (queue triage, filterable ticket tables, and status updates), and Admins (metrics dashboard and auto-refreshing database view).",
+                    "Automated SLA & Alert Notification Pipeline: Proactive notification service (notification_service.py) monitoring time-to-resolution thresholds, calculating SLA compliance, and alerting support leads on overdue items."
+                ],
+                archHighlights: [
+                    { icon: "fa-solid fa-bolt", title: "XGBoost Classifier (85.7%)", desc: "Top-performing gradient boosting model achieving 85.7% topic accuracy and 0.858 F1 score across 47,837 tickets." },
+                    { icon: "fa-solid fa-tags", title: "SpaCy Custom NER", desc: "Domain-specific entity extraction pipeline parsing issue descriptions for hardware models, software versions, and error codes." },
+                    { icon: "fa-solid fa-server", title: "Asynchronous FastAPI Core", desc: "Low-latency REST endpoints delivering real-time ticket synthesis, structured JSON validation, and SQLite persistence." },
+                    { icon: "fa-solid fa-clock", title: "Dynamic SLA & Notification Hub", desc: "Automated urgency scoring and SLA deadline tracker with active/closed queue tabs and live auto-refresh." }
+                ],
+                pipeline: ["Raw User Input", "NLTK Preprocessing & TF-IDF", "SpaCy NER Extraction", "XGBoost Topic & SMOTE Priority", "FastAPI Synthesis", "SQLite3 DB Logging", "Streamlit 3-Role Console"],
+                technologies: ["Python 3.10", "XGBoost", "Scikit-Learn", "SpaCy NER", "NLTK", "SMOTE (imbalanced-learn)", "FastAPI", "Streamlit", "SQLite3", "Pandas & NumPy", "Altair & Seaborn"],
+                github: "https://github.com/nehamiriamjose"
+            },
+            {
+                number: "04",
                 category: "Full-Stack Python Flask & On-Demand Logistics",
                 accent: "pink",
                 title: "CraveCart — Multi-User Food Ordering & Delivery System",
@@ -323,46 +401,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 pipeline: ["Discovery & Modifiers", "3D-Secure / UPI Checkout", "Kitchen Queue (/partner)", "Courier Dispatch (/courier)", "Live 7-Stage SVG Tracking", "Delivered & CravePoints"],
                 technologies: ["Python 3.10+", "Flask Framework", "Waitress WSGI", "SQLite3 (WAL Mode)", "Vanilla JS (ES6+)", "Custom CSS System", "Web Audio API", "Pytest (31 Tests)", "SVG Route Animation", "RESTful APIs"],
-                github: "https://github.com/nehamiriamjose"
-            },
-            {
-                number: "04",
-                category: "P2P Community Platform",
-                accent: "lavender",
-                title: "SwapReads — P2P Book Exchange Platform",
-                image: "./swapreads.png",
-                imageAlt: "SwapReads Platform Showcase",
-                stats: [
-                    { num: "P2P", label: "Direct Swapping", desc: "Community-driven exchange network" },
-                    { num: "Full-Stack", label: "Node & Express", desc: "RESTful architecture with MongoDB" },
-                    { num: "Real-Time", label: "Status Verification", desc: "Exchange validation and ratings" },
-                    { num: "Responsive", label: "Mobile Optimized", desc: "Clean, accessible reader interface" }
-                ],
-                mediaItems: [
-                    {
-                        type: "image",
-                        src: "./swapreads.png",
-                        tabLabel: "Marketplace & Community",
-                        icon: "fa-solid fa-book-bookmark",
-                        title: "SwapReads Book Discovery & Exchange Showcase",
-                        caption: "User-to-user book discovery platform with genre filtering, wishlist curation, peer reputation ratings, and verified exchange matching workflows."
-                    }
-                ],
-                about: "SwapReads is a collaborative community platform connecting book lovers for peer-to-peer book swapping, genre curation, user ratings, and decentralized reading circles. Built with a Node.js and Express backend backed by MongoDB, SwapReads simplifies physical book exchange and fosters vibrant local reading communities.",
-                features: [
-                    "User-to-user book discovery catalog with genre filtering, author search, and location-based book availability.",
-                    "Wishlist curation and automated exchange matching algorithms connecting readers with complementary reading interests.",
-                    "User reputation and review rating system ensuring trustworthy book swaps and condition assessments.",
-                    "Clean, intuitive responsive UI built for frictionless browsing and book request management."
-                ],
-                archHighlights: [
-                    { icon: "fa-brands fa-node-js", title: "Node.js & Express Core", desc: "High-throughput REST API managing user profiles, book listings, exchange proposals, and messaging." },
-                    { icon: "fa-solid fa-leaf", title: "MongoDB Document Schema", desc: "Flexible document data models storing rich book metadata, user wishlists, and exchange audit logs." },
-                    { icon: "fa-solid fa-arrows-rotate", title: "Automated Matchmaking", desc: "Smart algorithmic matchmaking pairing book offerers with corresponding wishlist seekers." },
-                    { icon: "fa-solid fa-shield-check", title: "Reputation & Trust Tier", desc: "Community review scores and exchange completion badges to ensure safe, reliable swaps." }
-                ],
-                pipeline: ["Book Cataloging", "Wishlist Matching", "Exchange Request", "Verification & Rating"],
-                technologies: ["Node.js", "Express.js", "MongoDB", "JavaScript ES6", "REST APIs", "CSS3", "HTML5"],
                 github: "https://github.com/nehamiriamjose"
             },
             {
@@ -764,6 +802,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             <i class="fa-brands fa-github"></i>
                             <span>View Repository on GitHub</span>
                         </a>
+                        ${data.reportUrl ? `
+                            <a href="${data.reportUrl}" target="_blank" rel="noopener noreferrer" class="btn-proj-action btn-proj-secondary" download>
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span>Download Project Documentation (PDF)</span>
+                            </a>
+                        ` : ''}
                     </div>
                 `;
             } else if (type === 'leadership') {
