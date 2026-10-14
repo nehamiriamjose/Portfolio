@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 pipeline: ["Student Auth / Login", "Docker Manager (16K-18K)", "10 Ephemeral Exploit Labs", "Flag & XP Validation", "Global Leaderboard"],
                 technologies: ["FastAPI 0.104", "Docker SDK 7.0", "Python 3.10", "SQLite3 (27 Tables)", "Google Gemini AI", "Flask Micro-Labs", "Uvicorn ASGI", "Vanilla CSS3 / ES6 JS", "DiceBear API", "HTTPx"],
-                github: "https://github.com/nehamiriamjose"
+                github: "https://github.com/nehamiriamjose/Ethical-Hacking-Simulation-Portal"
             },
             {
                 number: "02",
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: "./project/ai-ticket/user-part.mp4",
                 imageAlt: "AI-Powered Ticket Creation and Categorisation Video Demos",
                 author: "Neha Miriam Jose",
-                repoName: "nehamiriamjose/ai-ticket-creation-categorisation",
+                repoName: "nehamiriamjose/AI-Powered-Ticket-Creation-and-Categorisation-from-user-input-",
                 reportUrl: "./project/ai-ticket/project-report.pdf",
                 stats: [
                     { num: "47,837", label: "Dataset Scale", desc: "Enterprise IT support tickets processed" },
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 pipeline: ["Raw User Input", "NLTK Preprocessing & TF-IDF", "SpaCy NER Extraction", "XGBoost Topic & SMOTE Priority", "FastAPI Synthesis", "SQLite3 DB Logging", "Streamlit 3-Role Console"],
                 technologies: ["Python 3.10", "XGBoost", "Scikit-Learn", "SpaCy NER", "NLTK", "SMOTE (imbalanced-learn)", "FastAPI", "Streamlit", "SQLite3", "Pandas & NumPy", "Altair & Seaborn"],
-                github: "https://github.com/nehamiriamjose"
+                github: "https://github.com/nehamiriamjose/AI-Powered-Ticket-Creation-and-Categorisation-from-user-input-"
             },
             {
                 number: "04",
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: "./food_ordering.jpg",
                 imageAlt: "CraveCart Food Ordering & On-Demand Delivery Platform Dashboard",
                 author: "Neha Miriam Jose",
-                repoName: "nehamiriamjose/cravecart-food-delivery",
+                repoName: "nehamiriamjose/Food-Ordering-System",
                 stats: [
                     { num: "1,000+", label: "Concurrent Sessions", desc: "0 database locks under 1k load benchmark" },
                     { num: "3 Roles", label: "Unified Portals", desc: "Customer, Partner (/partner), Courier (/courier)" },
@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 pipeline: ["Discovery & Modifiers", "3D-Secure / UPI Checkout", "Kitchen Queue (/partner)", "Courier Dispatch (/courier)", "Live 7-Stage SVG Tracking", "Delivered & CravePoints"],
                 technologies: ["Python 3.10+", "Flask Framework", "Waitress WSGI", "SQLite3 (WAL Mode)", "Vanilla JS (ES6+)", "Custom CSS System", "Web Audio API", "Pytest (31 Tests)", "SVG Route Animation", "RESTful APIs"],
-                github: "https://github.com/nehamiriamjose"
+                github: "https://github.com/nehamiriamjose/Food-Ordering-System"
             },
             {
                 number: "05",
@@ -457,6 +457,63 @@ document.addEventListener('DOMContentLoaded', () => {
                 pipeline: ["Sensor Read (Soil, DHT22, MPU6050)", "CRC-16 Checksum Calculation", "SX1278 LoRa Transmission", "Receiver CRC Validation", "RSSI / SNR Diagnostic Extraction", "5-Tier Alert Evaluation & Dashboard"],
                 technologies: ["Embedded C++", "ESP32 (Dual Node)", "Semtech SX1278 LoRa", "SPI Bus Protocol", "I2C Interface", "MPU6050 6-DOF IMU", "DHT22 Environmental Sensor", "Capacitive Soil Moisture", "CRC-16 Checksum", "Web Audio / Alert Matrix"],
                 github: "https://github.com/nehamiriamjose"
+            },
+            {
+                number: "06",
+                category: "Frontend Web & Client-Side Data Persistence",
+                accent: "sage",
+                title: "Book Tracker — Personal Reading Journal & Catalog",
+                image: "./project/book-tracker/book-tracker-collection.png",
+                imageAlt: "Book Tracker Personal Reading Journal and Library Catalog Interface",
+                author: "Neha Miriam Jose",
+                repoName: "nehamiriamjose/Book-Tracker",
+                liveUrl: "https://nehamiriamjose.github.io/Book-Tracker/",
+                github: "https://github.com/nehamiriamjose/Book-Tracker",
+                stats: [
+                    { num: "100%", label: "Client-Side", desc: "Zero database or server dependencies" },
+                    { num: "4 Counters", label: "Reading Ledger", desc: "Live Total, To Read, Reading & Finished counts" },
+                    { num: "Instant", label: "Real-Time Search", desc: "Dynamic title & author substring filtering" },
+                    { num: "A11y", label: "Accessible Forms", desc: "ARIA alerts & dynamic input validation" },
+                    { num: "Offline", label: "LocalStorage Sync", desc: "Instant JSON serialization & browser cache" }
+                ],
+                mediaItems: [
+                    {
+                        type: "image",
+                        src: "./project/book-tracker/book-tracker-collection.png",
+                        tabLabel: "Library Catalog & Search",
+                        icon: "fa-solid fa-book-bookmark",
+                        title: "Personal Library Catalog, Real-Time Search & Status Filter Tabs",
+                        caption: "Interactive personal reading catalog featuring dynamic bookplate cards with reading status indicators (To read, Reading, Finished), instant title and author search, filter tabs, in-place status cycle dropdowns, and individual book deletion controls."
+                    },
+                    {
+                        type: "image",
+                        src: "./project/book-tracker/book-tracker-form.png",
+                        tabLabel: "Add Book & Reading Ledger",
+                        icon: "fa-solid fa-square-plus",
+                        title: "Accessible Book Entry Form & Real-Time Reading Ledger",
+                        caption: "Book logging interface with mandatory title and author validation, accessible aria-describedby error feedback, default status dropdown, and live statistics counter updating Total Books, To Read, Reading, and Finished reads instantaneously."
+                    }
+                ],
+                about: "Book Tracker is an elegant personal reading journal and library catalog web application inspired by independent bookstores and classic reading logs. Engineered with semantic HTML5, custom Vanilla CSS, and modular ES6+ JavaScript, the application delivers a quiet, distraction-free space to chronicle your reading life without requiring account creation, backend databases, or complex build tooling. All entries, status transitions, and library edits synchronize automatically to the browser's localStorage, ensuring immediate page load times, total data privacy, and seamless offline functionality.",
+                features: [
+                    "Intuitive Book Logging & Submission: Frictionless book addition workflow with fields for Book Title, Author, and Reading Status (To read, Reading, Finished) without page reloads, prepending newly added titles immediately to the top of the collection.",
+                    "Accessible Inline Form Validation: Enforces mandatory fields with clear error announcements, dynamic aria-invalid and aria-describedby attributes, and automatic blur-state validation that clears gracefully upon user input.",
+                    "Real-Time Reading Ledger: Dynamic statistics counter in the header tracking Total Books, To Read, Reading, and Finished counts, recalculating instantly on additions, status shifts, and deletions.",
+                    "Instant Search & Substring Matching: Real-time client-side search filtering across your entire library by book title or author name as you type.",
+                    "Status Category Filter Tabs: Seamlessly toggle between All, To read, Reading, and Finished shelves without re-fetching or reloading data.",
+                    "Interactive Bookplate Cards & In-Place Actions: Update a book's reading status on the fly with in-card dropdown menus or delete titles with single-click trash controls.",
+                    "Zero-Dependency Browser LocalStorage Persistence: Automatically serializes all records as structured JSON under the 'book_tracker_books' key, preserving complete libraries and empty bookshelves across browser refreshes.",
+                    "Warm Editorial Design Aesthetics: Curated reading-inspired palette using soft cream paper surfaces (#fbf9f4), muted sage green accents (#3f6050), and warm leather tones paired with Google Fonts Lora and Plus Jakarta Sans typography."
+                ],
+                archHighlights: [
+                    { icon: "fa-solid fa-database", title: "Browser LocalStorage Engine", desc: "Reliable client-side persistence serialized as structured JSON with unique UUID generation, maintaining data integrity without cloud servers." },
+                    { icon: "fa-solid fa-universal-access", title: "Accessible Form State Architecture", desc: "Accessible ARIA attributes, semantic inputs, and dynamic error announcements built with WCAG contrast and screen-reader standards in mind." },
+                    { icon: "fa-solid fa-magnifying-glass", title: "Sub-Millisecond Search & Filter DOM Pipeline", desc: "Fast event-driven DOM reconciliation filtering bookplate cards in memory without UI stutter or re-renders." },
+                    { icon: "fa-solid fa-palette", title: "Reading Journal Editorial UI System", desc: "Custom vanilla CSS design tokens, soft paper textures, matte pastel badges, and editorial typography (Lora & Plus Jakarta Sans)." }
+                ],
+                pipeline: ["Book Entry & ARIA Validation", "JSON Serialization & LocalStorage", "Reactive Ledger Counter Update", "Live Search & Filter Tabs", "In-Place Status Updates / Deletion"],
+                technologies: ["HTML5 Semantic", "Vanilla CSS3", "JavaScript (ES6+)", "Browser LocalStorage API", "Accessible Forms (ARIA)", "Google Fonts (Lora / Plus Jakarta Sans)", "GitHub Pages Hosting"],
+                github: "https://github.com/nehamiriamjose/Book-Tracker"
             }
         ];
 
@@ -798,6 +855,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (type === 'project' && data.github) {
                 actionRowHtml = `
                     <div class="modal-action-row">
+                        ${data.liveUrl ? `
+                            <a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn-proj-action btn-proj-live">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Open Live Application</span>
+                            </a>
+                        ` : ''}
                         <a href="${data.github}" target="_blank" rel="noopener noreferrer" class="btn-proj-action btn-proj-primary">
                             <i class="fa-brands fa-github"></i>
                             <span>View Repository on GitHub</span>

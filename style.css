@@ -2244,6 +2244,25 @@ a {
   transform: translateY(0) scale(0.98);
 }
 
+.btn-proj-live {
+  background: #3f6050;
+  color: #ffffff;
+  border: 1px solid #3f6050;
+  box-shadow: 0 4px 14px rgba(63, 96, 80, 0.24);
+}
+
+.btn-proj-live:hover {
+  background: #2d473b;
+  border-color: #2d473b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(63, 96, 80, 0.34);
+}
+
+.btn-proj-live:active {
+  transform: translateY(0) scale(0.98);
+}
+
 /* ==========================================================================
    Carousel Navigation Bar & Controls
    ========================================================================== */
@@ -3487,6 +3506,40 @@ a {
   gap: 0.45rem;
 }
 
+.lc-org a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lc-org a:hover {
+  color: var(--rose-primary);
+}
+
+.lc-live-badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.24rem 0.75rem;
+  background: var(--sage-bg, #edf4f0);
+  color: var(--sage-accent, #3f6050);
+  border: 1px solid var(--sage-border, #cce0d5);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.22s ease;
+}
+
+.lc-live-badge-link:hover {
+  background: var(--sage-accent, #3f6050);
+  color: #ffffff;
+  border-color: var(--sage-accent, #3f6050);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(63, 96, 80, 0.25);
+}
+
 .lc-desc {
   font-size: 0.94rem;
   line-height: 1.64;
@@ -3785,6 +3838,71 @@ a {
   color: var(--rose-primary);
   box-shadow: 0 4px 14px rgba(168, 89, 102, 0.12);
   transform: translateY(-1px);
+}
+
+/* Card Action Group Buttons in Grid Project Box */
+.lc-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+  width: 100%;
+}
+
+.lc-card-actions .btn-proj-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.48rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.62rem 1.2rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s var(--ease-editorial);
+  white-space: nowrap;
+  flex: 1 1 160px;
+}
+
+.lc-card-actions .btn-proj-primary {
+  background: var(--rose-primary);
+  color: #ffffff;
+  border: 1px solid var(--rose-primary);
+  box-shadow: 0 4px 14px rgba(168, 89, 102, 0.2);
+}
+
+.lc-card-actions .btn-proj-primary:hover {
+  background: var(--rose-hover);
+  border-color: var(--rose-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(168, 89, 102, 0.32);
+}
+
+.lc-card-actions .btn-proj-live {
+  background: #3f6050;
+  color: #ffffff;
+  border: 1px solid #3f6050;
+  box-shadow: 0 4px 14px rgba(63, 96, 80, 0.22);
+}
+
+.lc-card-actions .btn-proj-live:hover {
+  background: #2d473b;
+  border-color: #2d473b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(63, 96, 80, 0.34);
+}
+
+.lc-card-actions .lc-toggle-details-btn {
+  margin-top: 0;
+  width: auto;
+  flex: 1 1 170px;
+  padding: 0.62rem 1.2rem;
+  font-size: 0.82rem;
 }
 
 .lc-toggle-details-btn .toggle-icon {
