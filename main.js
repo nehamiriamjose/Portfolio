@@ -1116,21 +1116,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 8. Mobile Navigation Toggle ---
+    // --- 8. Mobile Navigation Toggle & Backdrop ---
     const navToggleBtn = document.getElementById('nav-toggle-btn');
     const navLinks = document.getElementById('nav-links');
+    const navBackdrop = document.getElementById('nav-backdrop');
 
     function closeMobileNav() {
         if (navLinks && navLinks.classList.contains('open')) {
             navLinks.classList.remove('open');
+            if (navBackdrop) {
+                navBackdrop.classList.remove('open');
+            }
             if (navToggleBtn) {
                 navToggleBtn.setAttribute('aria-expanded', 'false');
-                const icon = navToggleBtn.querySelector('i');
-                if (icon) {
-                    icon.classList.add('fa-bars');
-                    icon.classList.remove('fa-xmark');
-                }
+                navToggleBtn.classList.remove('is-active');
             }
+            document.body.style.overflow = '';
+        }
+    }
+
+    function openMobileNav() {
+        if (navLinks) {
+            navLinks.classList.add('open');
+            if (navBackdrop) {
+                navBackdrop.classList.add('open');
+            }
+            if (navToggleBtn) {
+                navToggleBtn.setAttribute('aria-expanded', 'true');
+                navToggleBtn.classList.add('is-active');
+            }
+            document.body.style.overflow = 'hidden';
         }
     }
 
@@ -1138,32 +1153,25 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggleBtn.setAttribute('aria-expanded', 'false');
         navToggleBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            const isOpen = navLinks.classList.toggle('open');
-            navToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            const icon = navToggleBtn.querySelector('i');
-            if (icon) {
-                if (isOpen) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-xmark');
-                } else {
-                    icon.classList.add('fa-bars');
-                    icon.classList.remove('fa-xmark');
-                }
+            if (navLinks.classList.contains('open')) {
+                closeMobileNav();
+            } else {
+                openMobileNav();
             }
         });
+
+        // Close when clicking backdrop
+        if (navBackdrop) {
+            navBackdrop.addEventListener('click', () => {
+                closeMobileNav();
+            });
+        }
 
         // Close when clicking any nav link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 closeMobileNav();
             });
-        });
-
-        // Close mobile nav when clicking anywhere outside
-        document.addEventListener('click', (e) => {
-            if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !navToggleBtn.contains(e.target)) {
-                closeMobileNav();
-            }
         });
 
         // Close on escape key
@@ -1229,6 +1237,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightActiveNav, { passive: true });
     highlightActiveNav();
+
+    // --- 9b. Mobile Floating Back to Top Button ---
+    const mobileFloatTopBtn = document.getElementById('mobile-float-top-btn');
+    if (mobileFloatTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 380) {
+                mobileFloatTopBtn.classList.add('is-visible');
+            } else {
+                mobileFloatTopBtn.classList.remove('is-visible');
+            }
+        }, { passive: true });
+
+        mobileFloatTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
     // --- 10. Contact Form Simulation ---
     const contactForm = document.getElementById('contact-form');

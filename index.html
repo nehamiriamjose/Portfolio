@@ -38,7 +38,7 @@
     </svg>
 
     <!-- Header Navigation -->
-    <header class="navbar-header">
+    <header class="navbar-header" id="navbar-header">
         <div class="nav-container">
             <a href="#home" class="nav-brand">
                 <span class="brand-badge">NMJ</span>
@@ -46,14 +46,28 @@
                 <span class="brand-name">Neha Miriam Jose</span>
             </a>
 
-            <nav class="nav-links" id="nav-links">
-                <a href="#about" class="nav-item"><span class="item-num">01</span> About</a>
-                <a href="#projects" class="nav-item"><span class="item-num">02</span> Work</a>
-                <a href="#skills" class="nav-item"><span class="item-num">03</span> Skills</a>
-                <a href="#journey" class="nav-item"><span class="item-num">04</span> Journey</a>
-                <a href="#leadership" class="nav-item"><span class="item-num">05</span> Leadership</a>
-                <a href="#milestones" class="nav-item"><span class="item-num">06</span> Milestones</a>
-                <a href="#contact" class="nav-item"><span class="item-num">07</span> Connect</a>
+            <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+                <div class="nav-links-list">
+                    <a href="#about" class="nav-item"><span class="item-num">01</span><i class="fa-regular fa-user nav-icon"></i><span>About</span></a>
+                    <a href="#projects" class="nav-item"><span class="item-num">02</span><i class="fa-solid fa-laptop-code nav-icon"></i><span>Work</span></a>
+                    <a href="#skills" class="nav-item"><span class="item-num">03</span><i class="fa-solid fa-code nav-icon"></i><span>Skills</span></a>
+                    <a href="#journey" class="nav-item"><span class="item-num">04</span><i class="fa-solid fa-graduation-cap nav-icon"></i><span>Journey</span></a>
+                    <a href="#leadership" class="nav-item"><span class="item-num">05</span><i class="fa-solid fa-people-roof nav-icon"></i><span>Leadership</span></a>
+                    <a href="#milestones" class="nav-item"><span class="item-num">06</span><i class="fa-solid fa-award nav-icon"></i><span>Milestones</span></a>
+                    <a href="#contact" class="nav-item"><span class="item-num">07</span><i class="fa-regular fa-envelope nav-icon"></i><span>Connect</span></a>
+                </div>
+                <div class="nav-drawer-footer">
+                    <a href="./Miriamjose_neha_resume_21-07-2026.pdf" class="btn-drawer-resume"
+                        download="Neha_Miriam_Jose_Resume.pdf" target="_blank">
+                        <i class="fa-regular fa-file-pdf"></i>
+                        <span>Download Full Resume</span>
+                    </a>
+                    <div class="drawer-socials-row">
+                        <a href="https://github.com/nehamiriamjose" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nehmiriamjose-6882312a8" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:nehamiriamjose05@gmail.com" class="drawer-social-btn" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
             </nav>
 
             <div class="nav-actions">
@@ -62,12 +76,15 @@
                     <i class="fa-regular fa-file-pdf"></i>
                     <span>Resume</span>
                 </a>
-                <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle Navigation">
-                    <i class="fa-solid fa-bars"></i>
+                <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle Navigation" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
                 </button>
             </div>
         </div>
     </header>
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
     <main>
         <!-- Hero Section -->
@@ -94,15 +111,17 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn-primary-pill">
-                            <span>Selected Work</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="https://github.com/nehamiriamjose" target="_blank" rel="noopener noreferrer"
-                            class="btn-secondary-pill">
-                            <i class="fa-brands fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
+                        <div class="hero-actions-row">
+                            <a href="#projects" class="btn-primary-pill">
+                                <span>Selected Work</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="https://github.com/nehamiriamjose" target="_blank" rel="noopener noreferrer"
+                                class="btn-secondary-pill">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
                         <a href="#contact" class="btn-text-link">
                             <span>Get in Touch</span>
                             <i class="fa-solid fa-arrow-right"></i>
@@ -1501,6 +1520,7 @@
     <!-- Global Project Details Pop-out Modal Dialog -->
     <div id="project-modal" class="project-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
         <div class="project-modal-dialog">
+            <div class="modal-drag-pill" aria-hidden="true"></div>
             <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Details">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -1526,6 +1546,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Mobile Floating Quick Back-to-Top Action -->
+    <button class="mobile-float-top-btn" id="mobile-float-top-btn" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script type="module" src="./main.js"></script>
 </body>
