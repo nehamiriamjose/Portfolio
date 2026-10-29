@@ -514,6 +514,104 @@ document.addEventListener('DOMContentLoaded', () => {
                 pipeline: ["Book Entry & ARIA Validation", "JSON Serialization & LocalStorage", "Reactive Ledger Counter Update", "Live Search & Filter Tabs", "In-Place Status Updates / Deletion"],
                 technologies: ["HTML5 Semantic", "Vanilla CSS3", "JavaScript (ES6+)", "Browser LocalStorage API", "Accessible Forms (ARIA)", "Google Fonts (Lora / Plus Jakarta Sans)", "GitHub Pages Hosting"],
                 github: "https://github.com/nehamiriamjose/Book-Tracker"
+            },
+            {
+                number: "07",
+                category: "Rule-Based Expert System, Emergency Decision Trees & Full-Stack Web",
+                accent: "blue",
+                title: "DisasterShield — Disaster Management Guidance Chatbot",
+                image: "./project/disaster-shield/disaster-shield-home.png",
+                imageAlt: "DisasterShield Disaster Management Guidance Chatbot Dashboard",
+                author: "Neha Miriam Jose",
+                repoName: "nehamiriamjose/-Disaster-Management-Guidance-Chatbot-",
+                liveUrl: "https://disaster-management-guidance-chatbo.vercel.app/",
+                github: "https://github.com/nehamiriamjose/-Disaster-Management-Guidance-Chatbot-",
+                stats: [
+                    { num: "35", label: "Decision Paths", desc: "Earthquake (13), Flood (12), Landslide (10)" },
+                    { num: "100%", label: "Deterministic", desc: "Zero hallucination, auditable safety logic" },
+                    { num: "100%", label: "Offline-Ready", desc: "Zero dependency on cloud APIs or internet" },
+                    { num: "4 Hotlines", label: "Verified Helplines", desc: "112 (ERSS), 1078 (NDRF), 101 (Fire), 108 (EMS)" },
+                    { num: "20 / 20", label: "Tests Passed", desc: "Automated Pytest verification suite" }
+                ],
+                mediaItems: [
+                    {
+                        type: "video",
+                        src: "./project/disaster-shield/disaster-shield-demo.mp4",
+                        poster: "./project/disaster-shield/disaster-shield-home.png",
+                        tabLabel: "Live Video Walkthrough",
+                        icon: "fa-solid fa-circle-play",
+                        title: "DisasterShield End-to-End Walkthrough",
+                        caption: "Live production walkthrough: disaster scenario selection, interactive situational triage questions, actionable emergency safety directives, 72-hour Go-Bag checklist tracking, and official helpline directory."
+                    },
+                    {
+                        type: "image",
+                        src: "./project/disaster-shield/disaster-shield-home.png",
+                        tabLabel: "Scenario Selection",
+                        icon: "fa-solid fa-house-chimney-crack",
+                        title: "Official Disaster Safety Assessment & Scenario Discovery",
+                        caption: "Landing dashboard featuring situation-specific disaster modules (Earthquake, Flood & Flash Flood, Landslide & Debris Flow) grounded in official Indian NDMA, GSI, CWC, and NDRF safety guidelines."
+                    },
+                    {
+                        type: "image",
+                        src: "./project/disaster-shield/disaster-shield-chat.png",
+                        tabLabel: "Interactive Chatbot",
+                        icon: "fa-solid fa-comments",
+                        title: "Rule-Based Interactive Emergency Chatbot",
+                        caption: "Real-time guided assessment engine that adapts dynamically to the victim's location (indoor, in-vehicle, outdoor) and rising hazard severity without external AI latency."
+                    },
+                    {
+                        type: "image",
+                        src: "./project/disaster-shield/disaster-shield-triage.png",
+                        tabLabel: "Critical Hazard Triage",
+                        icon: "fa-solid fa-triangle-exclamation",
+                        title: "Multi-Tier Urgency Triage & Electrical Safety Logic",
+                        caption: "Dynamically classifies risk levels (Normal, Precautionary, Urgent, Critical) and provides life-saving actions to strictly avoid, including submerged electrical hazards and fast water knock-down limits."
+                    },
+                    {
+                        type: "image",
+                        src: "./project/disaster-shield/disaster-shield-guidance.png",
+                        tabLabel: "Guidance & Helplines",
+                        icon: "fa-solid fa-shield-heart",
+                        title: "Synthesized Guidance Outcome & Emergency Hotlines",
+                        caption: "Final structured guidance outcome with instant action protocols, dangerous actions to avoid, direct-tap emergency helpline buttons, and conversation transcript copy/download functionality."
+                    },
+                    {
+                        type: "image",
+                        src: "./project/disaster-shield/disaster-shield-gobag.png",
+                        tabLabel: "72h Go-Bag Checklist",
+                        icon: "fa-solid fa-kit-medical",
+                        title: "72-Hour Emergency Go-Bag Preparedness Tracker",
+                        caption: "Comprehensive emergency kit checklist organized across vital documents, protective gear, first aid, and survival essentials with client-side localStorage persistence."
+                    },
+                    {
+                        type: "image",
+                        src: "./project/disaster-shield/disaster-shield-sources.png",
+                        tabLabel: "Official Directory",
+                        icon: "fa-solid fa-book-bookmark",
+                        title: "Verified National Emergency Directory & Statutory Protocols",
+                        caption: "Pan-India emergency helplines directory (112, 1078, 101, 108, CWC Flood Control, National Highways) directly cross-referenced against statutory government documentation."
+                    }
+                ],
+                about: "DisasterShield is an emergency decision-support web application engineered to deliver rapid, structured, and deterministic life-safety guidance during natural disasters including earthquakes, floods, and landslides. Rather than relying on non-deterministic generative AI models—which pose critical risks of hallucinated phone numbers or speculative advice during a crisis—DisasterShield is built on a verified rule-based expert system with 35 deterministic decision paths strictly derived from official statutory protocols (NDMA, Geological Survey of India, Central Water Commission, and NDRF). The system operates seamlessly both online on Vercel and completely offline locally during communication infrastructure collapses.",
+                features: [
+                    "Deterministic Rule-Based Expert System: Implements 35 exhaustive decision paths across Earthquake (13 paths), Flood & Flash Flood (12 paths), and Landslide & Debris Flow (10 paths) without external LLM dependencies.",
+                    "Multi-Tier Urgency Triage Engine: Dynamically evaluates the user's immediate environment (indoor, outdoor, stranded in vehicle, rising waters) and classifies situations across Normal, Precautionary, Urgent, and Critical severity levels.",
+                    "Life-Safety Directives & Avoidance Warnings: Explicitly details high-priority survival actions ('Drop, Cover & Hold On', vertical evacuation, lateral escape sprints) alongside dangerous actions to avoid (e.g. entering submerged breaker rooms, walking in fast currents).",
+                    "72-Hour Emergency Go-Bag Checklist: Interactive disaster preparedness tracker categorized into Vital Documents, Cash, Protective Clothing, Medical, and Survival Gear with real-time percentage progress saved to browser LocalStorage.",
+                    "Interactive Decision Tree Flowchart: Visual representation of the decision hierarchy allowing reviewers and users to inspect the underlying branch logic and outcome nodes.",
+                    "Session Conversation Transcript: Full session transcript generation enabling victims or emergency responders to review, copy, or download the diagnostic dialog as a timestamped .txt log.",
+                    "Zero-Hallucination Verified Emergency Hotlines: Integrated directory with direct-dial triggers for 112 (National ERSS), 1078 (NDRF Search & Rescue), 101 (Fire & Rescue), and 108 (Ambulance Triage).",
+                    "100% Offline Resilience: Pure Python/Flask backend and structured JSON knowledge base designed to run standalone on local machines during disaster-induced internet blackouts."
+                ],
+                archHighlights: [
+                    { icon: "fa-solid fa-sitemap", title: "Rule-Based Expert Engine", desc: "Deterministic decision-tree engine (chatbot_engine.py) traversing branch states based on user responses with guaranteed predictability." },
+                    { icon: "fa-solid fa-database", title: "Decoupled JSON Knowledge Base", desc: "Modular JSON datasets (earthquake.json, flood.json, landslide.json, checklist.json, sources.json) separating emergency domain rules from server logic." },
+                    { icon: "fa-solid fa-server", title: "Lightweight Python Flask Core", desc: "RESTful Python backend providing stateless decision routing, transcript rendering, and offline local hosting capabilities." },
+                    { icon: "fa-solid fa-shield-halved", title: "Zero-Latency Client Persistence", desc: "Client-side Vanilla ES6+ architecture with LocalStorage state persistence for Go-Bag progress without network overhead." }
+                ],
+                pipeline: ["Disaster Scenario Selection", "Situation & Location Assessment", "Deterministic Tree Branching", "Severity Triage & Directives", "Transcript & Go-Bag Tracking"],
+                technologies: ["Python 3.10+", "Flask Framework", "Rule-Based Expert Systems", "Decision Trees", "Vanilla JavaScript (ES6+)", "HTML5 & CSS3", "Browser LocalStorage", "Pytest Suite (20 Tests)", "Vercel Cloud Deployment"],
+                github: "https://github.com/nehamiriamjose/-Disaster-Management-Guidance-Chatbot-"
             }
         ];
 
@@ -1310,7 +1408,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 cards.forEach(card => {
                     const cardCat = card.getAttribute('data-category');
-                    if (filter === 'all' || cardCat === filter) {
+                    const match = filter === 'all' || cardCat === filter || (cardCat && cardCat.split(/\s+/).includes(filter));
+                    if (match) {
                         card.classList.remove('is-filtered-out');
                         card.style.opacity = '0';
                         card.style.transform = 'translateY(12px)';
