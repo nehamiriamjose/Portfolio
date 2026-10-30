@@ -5370,7 +5370,21 @@ a {
   }
 
   .hero-container {
+    display: flex;
+    flex-direction: column;
     gap: 2.2rem;
+  }
+
+  .hero-right {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-left {
+    order: 2;
+    width: 100%;
   }
 
   .hero-status-pill {
