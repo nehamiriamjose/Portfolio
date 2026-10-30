@@ -6241,9 +6241,9 @@ a {
   }
 
   .profile-avatar-img {
-    width: 68px;
-    height: 68px;
-    border-radius: 12px;
+    width: 124px;
+    height: 124px;
+    border-radius: 20px;
   }
 
   .person-name {
@@ -6369,5 +6369,11 @@ a {
 
   .modal-stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .profile-avatar-img {
+    width: 108px;
+    height: 108px;
+    border-radius: 18px;
   }
 }
