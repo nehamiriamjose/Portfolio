@@ -4543,6 +4543,22 @@ a {
   animation: heroFade 0.25s var(--ease-editorial);
 }
 
+.form-feedback.error {
+  display: block;
+  background: #fff0f0;
+  border: 1px solid #f8c8c8;
+  color: #c0392b;
+  font-weight: 500;
+  animation: heroFade 0.25s var(--ease-editorial);
+}
+
+.form-feedback.error a {
+  color: #c0392b;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+
 /* ==========================================================================
    Footer
    ========================================================================== */
