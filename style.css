@@ -5480,9 +5480,9 @@ a {
   }
 
   .profile-avatar-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 20px;
+    width: 180px;
+    height: 215px;
+    border-radius: 24px;
     flex-shrink: 0;
   }
 
@@ -6241,9 +6241,9 @@ a {
   }
 
   .profile-avatar-img {
-    width: 124px;
-    height: 124px;
-    border-radius: 20px;
+    width: 175px;
+    height: 210px;
+    border-radius: 22px;
   }
 
   .person-name {
@@ -6372,8 +6372,8 @@ a {
   }
 
   .profile-avatar-img {
-    width: 108px;
-    height: 108px;
+    width: 150px;
+    height: 180px;
     border-radius: 18px;
   }
 }
